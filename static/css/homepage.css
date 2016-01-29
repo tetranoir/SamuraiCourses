@@ -1,0 +1,30 @@
+.button-container {
+	display: flex;
+	flex-flow: column wrap;
+	margin-left: auto;
+}
+.button-gp{
+	margin: 15px auto;
+	width: 30%;
+}
+.button-gp button{
+	width: 100%;
+	display: block;
+}
+
+.hp-button-container{
+	display: flex;
+	justify-content: center;
+	flex-flox: row wrap;
+}
+
+.half-width{
+	width: 50%;
+}
+
+@media only screen and (max-width: 550px) {
+	.button-gp{
+		margin: 15px auto;
+		width: 100%;
+	}
+}
