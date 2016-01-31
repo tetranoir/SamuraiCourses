@@ -8,6 +8,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/homepage.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,37 +22,44 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Samurai Courses</a>
+		    </div> <!--navbar-header-->
+
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a href="#">Login</a></li>
+		    		<li><a href="#">Sign up</a></li>
+		    	</ul>
+		    </div> <!-- collapse navbar-collapse-->
+		</div>
+	</nav>
+
 	<div class="container">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
 		<div class="jumbotron">
 			<h1>Samurai Courses</h1>
-			<p>Painless scheduling</p>
+			<p>Simple Scheduling</p>
 		</div>
 
-		<div class="button-container">
-			<div class="button-gp">
-				<button type="button" class=" btn btn-primary btn-lg">Create schedule</button>
-			</div>
-			<div class="button-gp">
-				<button type="button" class=" btn btn-primary btn-lg">View Schedule</button>
-			</div>
-			<div class="button-gp">
-				<button type="button" class=" btn btn-primary btn-lg">Explore Coureses</button>
-			</div>
-			<div class="button-gp">
-				<button type="button" class=" btn btn-primary btn-lg">Help</button>
-			</div>
-			<div class="button-gp">
-				<button type="button" class=" btn btn-primary btn-lg">Contact Us</button>
-			</div>
+		<div class="button-gp">
+			<button type="button" class=" btn btn-primary btn-lg">Create schedule</button>
 		</div>
-		
-		<div style="text-align: center; margin: auto"><object type="application/x-shockwave-flash" style="width:1120px; height:630px;" data="https://www.youtube.com/embed/czDn4asqaMs&amp;enablejsapi=1&amp;autoplay=1&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1">
-			<param name="movie" value="http://www.youtube.com/v/GRonxog5mbw?rel=0&amp;loop=1&amp;autoplay=1&amp;showsearch=0&amp;version=3&amp;showinfo=0&amp;modestbranding=1&amp;fs=1" />
-			<param name="allowFullScreen" value="true" />
-			<param name="allowscriptaccess" value="always" />
-			</object>
+		<div class="button-gp">
+			<button type="button" class=" btn btn-primary btn-lg">View Schedule</button>
+		</div>
+		<div class="button-gp">
+			<button type="button" class=" btn btn-primary btn-lg">Explore Coureses</button>
+		</div>
+		<div class="button-gp">
+			<button type="button" class="btn btn-info btn-lg half-width">Help</button>
+			<button type="button" class="btn btn-info btn-lg half-width pull-right">Contact Us</button>
 		</div>
 		
 	</div>
