@@ -10,6 +10,9 @@
 	width: 49%;
 }
 
+.nav-back a.navbar-brand{
+	border: 4px inset #EEEEEE;
+}
 @media only screen and (min-width: 550px) {
 	.button-gp {
 		margin: 10px auto;
