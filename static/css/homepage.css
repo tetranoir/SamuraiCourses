@@ -2,15 +2,16 @@
 	margin: 10px auto;
 }
 
-.button-gp button{
+.button-gp button {
 	width: 100%;
 }
 
-.button-gp .half-width{
-	width: 49%;
+.button-gp .half-width {
+	width: 48.8%; /* back-up width*/
+	width: calc(50% - 5px);
 }
 
-.nav-back a.navbar-brand{
+.nav-back a.navbar-brand {
 	border: 4px inset #EEEEEE;
 }
 @media only screen and (min-width: 550px) {
@@ -20,3 +21,23 @@
 	}
 }
 
+.schedule-header .schedule-day {
+	background-color: #F5F5F5;
+	border: 1px solid #C5C5C5;
+	border-right: none;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 2px;
+}
+
+.schedule-timeblocks .schedule-timetext {
+	background-color: #F5F5F5;
+	border: 1px solid #C5C5C5;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 2px;
+}
+
+.schedule-timeblocks .row {
+	margin: none;
+}
