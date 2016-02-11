@@ -49,54 +49,95 @@
 		</div>
 
 		<div class="schedule">
-			<div class="row schedule-header">
+			<div class="row schedule-header no-gutter">
 				<div class="col-xs-1"></div>
 				<div class="col-xs-2 schedule-day">Mon<text class="hidden-xs">day</text></div>
 				<div class="col-xs-2 schedule-day">Tues<text class="hidden-xs">day</text></div>
 				<div class="col-xs-2 schedule-day">Wed<text class="hidden-xs">nesday</text></div>
 				<div class="col-xs-2 schedule-day">Thur<text class="hidden-xs">sday</text></div>
-				<div class="col-xs-2 schedule-day" style="border-right: 1px solid #C5C5C5;">Fri<text class="hidden-xs">day</text></div>
+				<div class="col-xs-2 schedule-day right-end">Fri<text class="hidden-xs">day</text></div>
 			</div>
+
 			<div class="schedule-timeblocks">
-				<div class="row"><div class="col-xs-1">
+				<div class="row no-gutter side-cols"><div class="col-xs-1">
 					<div class="schedule-timetext">9</div>
 				</div></div>
-				<div class="row"><div class="col-xs-1">
+				<div class="row no-gutter side-cols"><div class="col-xs-1">
 					<div class="schedule-timetext">10</div>
 				</div></div>
-				<div class="row"><div class="col-xs-1">
+				<div class="row no-gutter side-cols"><div class="col-xs-1">
 					<div class="schedule-timetext">11</div>
 				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">12</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">1</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">2</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">3</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">4</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">5</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">6</div>
-				</div></div>
-				<div class="row"><div class="col-xs-1">
-					<div class="schedule-timetext">7</div>
+				<div class="row no-gutter side-cols"><div class="col-xs-1 last-block">
 				</div></div>
 			</div>
 		</div>
+
+		<div class="daily">
+			<ul class="nav nav-pills nav-justified nav-color">
+				<li class="active daily-day"><a data-toggle="pill" href="#monday">M</a></li>
+				<li class="daily-day"><a data-toggle="pill" href="#tuesday">T</a></li>
+				<li class="daily-day"><a data-toggle="pill" href="#wednesday">W</a></li>
+				<li class="daily-day"><a data-toggle="pill" href="#thursday">T</a></li>
+				<li class="daily-day"><a data-toggle="pill" href="#friday">F</a></li>
+			</ul>
+			<hr class="low-margin"/>
+			<div class="daily-timecells">
+				<div class="row half-hour-cell-a"><div class="col-xs-4">
+					<text>08:00a</text>
+				</div></div>
+				<div class="row half-hour-cell-b"><div class="col-xs-4">
+					<text>08:30a</text>
+				</div></div>
+				<div class="row half-hour-cell-a"><div class="col-xs-4">
+					<text>09:00a</text>
+				</div></div>
+				<div class="row half-hour-cell-b"><div class="col-xs-4">
+					<text>09:30a</text>
+				</div></div>
+				<div class="row half-hour-cell-a"><div class="col-xs-4">
+					<text>10:00a</text>
+				</div></div>
+				<div class="row half-hour-cell-b"><div class="col-xs-4">
+					<text>10:30a</text>
+				</div></div>
+				<div class="row half-hour-cell-a"><div class="col-xs-4">
+					<text>11:00a</text>
+				</div></div>
+				<div class="row half-hour-cell-b"><div class="col-xs-4">
+					<text>11:30a</text>
+				</div></div>
+
+				<div class="tab-content">
+					<div id="monday" class="tab-pane fade in active">
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p>CLASS2</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p>CLASS3</p></div></div>
+					</div>
+					<div id="tuesday" class="tab-pane fade">
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p>CLASS4</p></div></div>
+					</div>
+					<div id="wednesday" class="tab-pane fade">
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p>CLASS2</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p>CLASS3</p></div></div>
+					</div>
+					<div id="thursday" class="tab-pane fade">
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p>CLASS4</p></div></div>
+					</div>
+					<div id="friday" class="tab-pane fade">
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height:60px; background-color:#FFFE90; margin-top:90px;"><p>CLASS5</p></div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/introHCI.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/introHCI.js"></script>
 </body>
 </html>

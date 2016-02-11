@@ -14,30 +14,111 @@
 .nav-back a.navbar-brand {
 	border: 4px inset #EEEEEE;
 }
+
 @media only screen and (min-width: 550px) {
 	.button-gp {
 		margin: 10px auto;
 		width: 400px;
 	}
 }
-
+.schedule {
+	margin-bottom: 20px;
+}
 .schedule-header .schedule-day {
 	background-color: #F5F5F5;
 	border: 1px solid #C5C5C5;
 	border-right: none;
 	text-align: center;
-	font-weight: bold;
+	font-variant: small-caps;
 	padding-top: 2px;
 }
 
+.schedule-header :last-child {
+	border-right: 1px solid #C5C5C5;
+}
+
 .schedule-timeblocks .schedule-timetext {
+	width:100%;
 	background-color: #F5F5F5;
-	border: 1px solid #C5C5C5;
-	text-align: center;
-	font-weight: bold;
+	/*border: 1px solid #C5C5C5;
+	border-bottom: none;*/
+	text-align: right;
+	font-variant: small-caps;
+	padding-right: 6px;
 	padding-top: 2px;
+}
+
+.schedule-timeblocks .last-block {
+	/*border-top: 1px solid #C5C5C5;*/
 }
 
 .schedule-timeblocks .row {
 	margin: none;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row.no-gutter.side-cols [class*='col-'],
+.row.no-gutter.side-cols [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.daily > .nav-justified > li {
+	display: table-cell;
+	width: 1%;
+}
+
+.daily > .nav-justified > li > a {
+	margin-bottom: 0;
+}
+
+.half-hour-cell-a {
+	padding-top: 10px;
+	background-color: #F5F5F5;
+	text-align: right;
+}
+
+.half-hour-cell-b {
+	padding-top: 10px;
+	background-color: #FFFFFF;
+	text-align: right;
+}
+
+.nav-pills > li > a {
+	color: #606060;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+	background-color: #F5F5F5;
+	color: red;
+}
+
+/*.nav-pills > li.active > a:hover {
+	background-color: #F5F5F5;
+}*/
+
+.daily-timecells {
+	position: relative;
+}
+
+.tab-content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.low-margin {
+	margin: 10px 0;
 }
