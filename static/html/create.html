@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link href="../css/homepage.css" rel="stylesheet">
 	<link rel="icon" type="../image/png" href="favicon.png">
 	<link rel="shortcut icon" type="../image/png" href="favicon.png">
@@ -48,9 +48,13 @@
 			<p>Hopefully one of these is useful</p>
 		</div>
 
+		<div class="row create-buttons">
+			<button type="button" class="col-xs-offset-8 btn btn-default">add class</button>
+		</div>
+		<br>
 		<div class="schedule">
 			<div class="row schedule-header no-gutter">
-				<div class="col-xs-1"></div>
+				<div class="col-xs-1 schedule-day">.</div>
 				<div class="col-xs-2 schedule-day">Mon<text class="hidden-xs">day</text></div>
 				<div class="col-xs-2 schedule-day">Tues<text class="hidden-xs">day</text></div>
 				<div class="col-xs-2 schedule-day">Wed<text class="hidden-xs">nesday</text></div>
@@ -110,26 +114,48 @@
 
 				<div class="tab-content">
 					<div id="monday" class="tab-pane fade in active">
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p>CLASS2</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p>CLASS3</p></div></div>
+						<div class="row"><a href="#" data-toggle="modal" data-target="#class1info"><div class="col-xs-offset-4 col-xs-4 class-box" style="height: 90px; background-color:#A5F5F5;">
+							<p class="class-info">CLASS1</p>
+						</div></a></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p class="class-info">CLASS2</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p class="class-info">CLASS3</p></div></div>
 					</div>
 					<div id="tuesday" class="tab-pane fade">
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p>CLASS4</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p class="class-info">CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p class="class-info">CLASS4</p></div></div>
 					</div>
 					<div id="wednesday" class="tab-pane fade">
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p>CLASS2</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p>CLASS3</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p class="class-info">CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 60px; background-color:#F5A5A5;"><p class="class-info">CLASS2</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 30px; background-color:#A5A5F5; margin-top:30px;"><p class="class-info">CLASS3</p></div></div>
 					</div>
 					<div id="thursday" class="tab-pane fade">
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p>CLASS1</p></div></div>
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p>CLASS4</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5F5;"><p class="class-info">CLASS1</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height: 90px; background-color:#A5F5A5; margin-top:60px;"><p class="class-info">CLASS4</p></div></div>
 					</div>
 					<div id="friday" class="tab-pane fade">
-						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height:60px; background-color:#FFFE90; margin-top:90px;"><p>CLASS5</p></div></div>
+						<div class="row"><div class="col-xs-offset-4 col-xs-4" style="height:60px; background-color:#FFFE90; margin-top:90px;"><p class="class-info">CLASS5</p></div></div>
 					</div>
+				</div>
+
+				<!-- Modal-->
+				<div id="class1info" class="modal fade">
+				  <div class="modal-dialog">
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Class 1</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>This is a class where you have to memorize and learn.</p>
+				      </div>
+				      <div class="modal-footer">
+				      	<p>Professor Staff</p>
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
 				</div>
 			</div>
 		</div>

@@ -33,24 +33,24 @@
 	padding-top: 2px;
 }
 
-.schedule-header :last-child {
+.schedule-header .right-end {
 	border-right: 1px solid #C5C5C5;
 }
 
 .schedule-timeblocks .schedule-timetext {
 	width:100%;
 	background-color: #F5F5F5;
-	/*border: 1px solid #C5C5C5;
-	border-bottom: none;*/
+	border: 1px solid #C5C5C5;
+	border-top: none;
 	text-align: right;
 	font-variant: small-caps;
 	padding-right: 6px;
 	padding-top: 2px;
 }
 
-.schedule-timeblocks .last-block {
-	/*border-top: 1px solid #C5C5C5;*/
-}
+/*.schedule-timeblocks .last-block {
+	border-top: 1px solid #C5C5C5;
+}*/
 
 .schedule-timeblocks .row {
 	margin: none;
@@ -103,9 +103,9 @@
 	color: red;
 }
 
-/*.nav-pills > li.active > a:hover {
+.nav-pills > li.active > a:hover {
 	background-color: #F5F5F5;
-}*/
+}
 
 .daily-timecells {
 	position: relative;
@@ -116,7 +116,11 @@
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
+}
+
+.class-info {
+	padding-top: 5px;
 }
 
 .low-margin {
