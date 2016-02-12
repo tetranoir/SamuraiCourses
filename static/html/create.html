@@ -8,6 +8,7 @@
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link href="../css/homepage.css" rel="stylesheet">
+	<link href="../css/search.css" rel="stylesheet">
 	<link rel="icon" type="../image/png" href="favicon.png">
 	<link rel="shortcut icon" type="../image/png" href="favicon.png">
 
@@ -49,7 +50,7 @@
 		</div>
 
 		<div class="row create-buttons">
-			<button type="button" class="col-xs-offset-8 btn btn-default">add class</button>
+			<button type="button" href="#search" class="col-xs-offset-8 btn btn-default">add class</button>
 		</div>
 		<br>
 		<div class="schedule">
@@ -162,8 +163,16 @@
 
 	</div>
 
+	<!-- Search Form -->
+	<div id="search"> 
+		<span class="close">X</span>
+		<form role="search" id="searchform" action="/search" method="get">
+			<input value="" name="q" type="search" placeholder="type to search courses"/>
+		</form>
+	</div>
+
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/introHCI.js"></script>
+	<script src="../js/search.js"></script>
 </body>
 </html>
