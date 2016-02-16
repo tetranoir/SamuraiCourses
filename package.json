@@ -1,0 +1,26 @@
+{
+  "name": "SamuraiCourses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tetranoir/SamuraiCourses.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tetranoir/SamuraiCourses/issues"
+  },
+  "homepage": "https://github.com/tetranoir/SamuraiCourses#readme",
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
+  }
+}
