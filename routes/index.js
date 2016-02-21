@@ -5,5 +5,5 @@
  */
 
 exports.view = function(req, res){
-	res.render('index');
-};
+	res.render('index'); // finds 'views/index.handlebars'
+}; // set to "views" in app.js

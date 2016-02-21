@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        Tutorials point Bootstrap Examples
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="one-page-wonder.css" rel="stylesheet">
+
+    <style>
+        .agenda {}
+        /* Dates */
+        
+        .agenda .agenda-date {
+            width: 170px;
+        }
+        
+        .agenda .agenda-date .dayofmonth {
+            width: 40px;
+            font-size: 36px;
+            line-height: 36px;
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+        
+        .agenda .agenda-date .shortdate {
+            font-size: 0.75em;
+        }
+        /* Times */
+        
+        .agenda .agenda-time {
+            width: 140px;
+        }
+        /* Events */
+        
+        .agenda .agenda-events {}
+        
+        .agenda .agenda-events .agenda-event {}
+        
+        @media (max-width: 767px) {}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">
+              Toggle navigation
+            </span>
+                    <span class="icon-bar">
+            </span>
+                    <span class="icon-bar">
+            </span>
+                    <span class="icon-bar">
+            </span>
+                </button>
+                <h1 class="logo">
+            <a title="tutorialspoint">
+              <img alt="tutorialspoint" src="http://www.tutorialspoint.com/green/images/logo.png" style="height: auto; width: auto; display: inline-block; top: 0px;">
+            </a>
+          </h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <h1 class="thick-heading">
+        ||Calender Agenda Example||
+      </h1>
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <!------------------------code---------------start---------------->
+
+
+            <div class="container">
+
+
+
+                <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">26</div>
+                                        <div class="dayofweek">Saturday</div>
+                                        <div class="shortdate text-muted">July, 2014</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        5:30 AM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>  Fishing
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Multiple events in a single day (note the rowspan) -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="3">
+                                        <div class="dayofmonth">24</div>
+                                        <div class="dayofweek">Thursday</div>
+                                        <div class="shortdate text-muted">July, 2014</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        8:00 - 9:00 AM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Client Appointment
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="agenda-time">
+                                        10:15 AM - 12:00 PM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Meeting with Clients
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="agenda-time">
+                                        7:00 - 9:00 PM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Conference
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!----Code------end----------------------------------->
+        </div>
+        <!-- /.container -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1">
+                        <a href="index.html" class="logo">
+
+                            <img alt="Tutorials Point" class="img-responsive" src="http://www.tutorialspoint.com//scripts/img/logo-footer.png">
+
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <p>
+                            © Copyright 2015. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+        </script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js">
+        </script>
+    </div>
+</body>
+
+</html>
