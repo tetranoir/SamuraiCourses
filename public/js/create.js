@@ -119,7 +119,7 @@ class Class{
 }
 
 /*
-Name: class Class
+Name: class Section
 
 Description: 	child class of Class.  
 				When parsing json, we want to instantiate

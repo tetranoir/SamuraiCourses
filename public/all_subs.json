@@ -1,0 +1,994 @@
+{
+  "AAS": "African American Studies",
+  "AESE": "ArchitectureBsdEntrpSystmsEngr",
+  "AIP": "Academic Internship Program",
+  "ANAR": "Anthropological Archeology",
+  "ANBI": "Anthro/Biological Anthropology",
+  "ANES": "Anesthesiology",
+  "ANSC": "Anthropology/Sociocultural",
+  "ANTH": "Anthropology",
+  "AUD": "Audiology",
+  "BENG": "Bioengineering",
+  "BGGN": "Biology/Grad/General",
+  "BGSE": "Biology/Grad/Seminar",
+  "BIBC": "Biology/Biochemistry",
+  "BICD": "Biol/Genetics,Cellular and Develop",
+  "BIEB": "Biol/Ecology, Behavior, and Evol",
+  "BILD": "Biology/Lower Division",
+  "BIMM": "Biology/Molec Biol, Microbiol",
+  "BIOM": "Biomedical Sciences",
+  "BIPN": "Biology/Animal Physiol and Neurosc",
+  "BISP": "Biology/Special Studies",
+  "BNFO": "Bioinformatics",
+  "CAT": "Culture, Art, and Technology",
+  "CENG": "Chemical Engineering",
+  "CGS": "Critical Gender Studies",
+  "CHEM": "Chemistry and Biochemistry",
+  "CHIN": "Chinese Studies",
+  "CLIN": "Clinical Psychology",
+  "CLRE": "Clinical Research",
+  "CLSS": "Classics",
+  "CMM": "Cellular and Molecular Medicine",
+  "COGR": "Communication/Graduate",
+  "COGS": "Cognitive Science",
+  "COMM": "Communication",
+  "CONT": "Contemporary Issues",
+  "CSE": "Computer Science and Engineering",
+  "DOC": "Dimensions of Culture",
+  "DSE": "Data Science and Engineering",
+  "EAP": "Education Abroad Program",
+  "ECE": "Electrical and Computer Engineer",
+  "ECON": "Economics",
+  "EDS": "Education Studies",
+  "EMED": "Emergency Medicine",
+  "ENG": "Engineering",
+  "ENVR": "Environmental Studies",
+  "ERC": "Eleanor Roosevelt College",
+  "ESYS": "Environmental Systems",
+  "ETHN": "Ethnic Studies",
+  "EXPR": "Exchange Programs",
+  "FILM": "Film Studies",
+  "FPM": "Family and Preventive Medicine",
+  "FPMU": "Family and Prev Med Undergraduate",
+  "GLBH": "Global Health",
+  "HDP": "Human Development Program",
+  "HIAF": "History of Africa",
+  "HIEA": "History of East Asia",
+  "HIEU": "History of Europe",
+  "HIGR": "History, Graduate",
+  "HILA": "History of Latin America",
+  "HILD": "History, Lower Division",
+  "HINE": "History of the Near East",
+  "HISC": "History of Science",
+  "HITO": "History Topics",
+  "HIUS": "History of the United States",
+  "HLAW": "Health Law",
+  "HMNR": "Human Rights",
+  "HUM": "Humanities",
+  "ICAM": "Computing and the Arts",
+  "INTL": "International Studies",
+  "IRCO": "Intrnat Relat/Pac Study-Core",
+  "IRGN": "Intrnat Relat/Pac Study-Generl",
+  "IRLA": "Intrnat Relat/Pac Study-Lang",
+  "JAPN": "Japanese Studies",
+  "JUDA": "Judaic Studies",
+  "LATI": "Latin American Studies",
+  "LAWS": "Law and Society",
+  "LHCO": "Leadership/Health Care Organiz",
+  "LIAB": "Linguistics/Arabic",
+  "LIDS": "Linguistics/Directed Stdy-Lang",
+  "LIFR": "Linguistics/French",
+  "LIGM": "Linguistics/German",
+  "LIGN": "Linguistics/General",
+  "LIHL": "Linguistics/Heritage Languages",
+  "LIIT": "Linguistics/Italian",
+  "LIPO": "Linguistics/Portuguese",
+  "LISL": "Linguistics/Amer Sign Language",
+  "LISP": "Linguistics/Spanish",
+  "LTCO": "Literature/Comparative",
+  "LTCS": "Literature/Cultural Studies",
+  "LTEA": "Literatures/East Asian",
+  "LTEN": "Literatures in English",
+  "LTEU": "Literature/European and Eurasian",
+  "LTFR": "Literature/French",
+  "LTGK": "Literature/Greek",
+  "LTGM": "Literature/German",
+  "LTIT": "Literature/Italian",
+  "LTKO": "Literature/Korean",
+  "LTLA": "Literature/Latin",
+  "LTRU": "Literature/Russian",
+  "LTSP": "Literature/Spanish",
+  "LTTH": "Literature/Theory",
+  "LTWL": "Literatures of the World",
+  "LTWR": "Literature/Writing",
+  "MAE": "Mechanical and Aerospace Engin",
+  "MATH": "Mathematics",
+  "MATS": "Materials Sci and Engineering",
+  "MBC": "MarineBiodiversity and Conservatn",
+  "MCWP": "Muir College Writing Program",
+  "MDE": "Medical Device Engineering",
+  "MED": "Medicine",
+  "MGT": "Rady School of Management",
+  "MGTF": "Rady Sch of Management Finance",
+  "MMW": "Making of the Modern World",
+  "MSED": "Mathematics and Science Educ",
+  "MUIR": "Muir College",
+  "MUS": "Music",
+  "NANO": "NanoEngineering",
+  "NEU": "Neurosciences",
+  "OPTH": "Ophthalmology",
+  "ORTH": "Orthopaedics",
+  "PATH": "Pathology",
+  "PEDS": "Pediatrics",
+  "PHAR": "Pharmacology",
+  "PHIL": "Philosophy",
+  "PHYS": "Physics",
+  "POLI": "Political Science",
+  "PSY": "Psychiatry",
+  "PSYC": "Psychology",
+  "RAD": "Radiology",
+  "RELI": "Religion, Study of",
+  "REV": "Revelle College",
+  "RMAS": "Radiation Med and Applied Sci",
+  "RMED": "Reproductive Medicine",
+  "SDCC": "San Diego Community College",
+  "SE": "Structural Engineering",
+  "SIO": "Scripps Inst of Oceanography",
+  "SIOB": "Scripps Inst of Oceanogr/OBP",
+  "SIOC": "Scripps Inst of Oceanogr/COAP",
+  "SIOG": "Scripps Inst of Oceanogr/GEO",
+  "SOCE": "Soc/Ind Research and Honors Prog",
+  "SOCG": "Soc/Graduate",
+  "SOCI": "Sociology",
+  "SOMC": "School of Medicine Core Crses",
+  "SOMI": "Sch of Med Interdisciplinary",
+  "SPPS": "Pharmacy",
+  "SURG": "Surgery",
+  "TDAC": "Theatre / Acting",
+  "TDCH": "Dance/Choreography",
+  "TDDE": "Theatre / Design",
+  "TDDR": "Theatre / Directing and Stage Mgmt",
+  "TDGE": "Theatre / General",
+  "TDGR": "Theatre / Graduate",
+  "TDHD": "Dance/History",
+  "TDHT": "Theatre / History and Theory",
+  "TDMV": "Dance/Movement",
+  "TDPF": "Dance/Performance",
+  "TDPR": "Theatre Dance/Practicum",
+  "TDPW": "Theatre / Playwriting",
+  "TDTR": "Dance/Theory",
+  "TMC": "Thurgood Marshall College",
+  "TWS": "Third World Studies",
+  "USP": "Urban Studies and Planning",
+  "VIS": "Visual Arts",
+  "WARR": "Warren College",
+  "WCWP": "Warren College Writing Program",
+  "WES": "Wireless Embedded Systems",
+  "all_subjects": [
+    {
+      "abrv": "AAS",
+      "id": "A",
+      "name": "African American Studies"
+    },
+    {
+      "abrv": "AESE",
+      "id": "A",
+      "name": "ArchitectureBsdEntrpSystmsEngr"
+    },
+    {
+      "abrv": "AIP",
+      "id": "A",
+      "name": "Academic Internship Program"
+    },
+    {
+      "abrv": "ANAR",
+      "id": "A",
+      "name": "Anthropological Archeology"
+    },
+    {
+      "abrv": "ANBI",
+      "id": "A",
+      "name": "Anthro/Biological Anthropology"
+    },
+    {
+      "abrv": "ANES",
+      "id": "A",
+      "name": "Anesthesiology"
+    },
+    {
+      "abrv": "ANSC",
+      "id": "A",
+      "name": "Anthropology/Sociocultural"
+    },
+    {
+      "abrv": "ANTH",
+      "id": "A",
+      "name": "Anthropology"
+    },
+    {
+      "abrv": "AUD",
+      "id": "A",
+      "name": "Audiology"
+    },
+    {
+      "abrv": "BENG",
+      "id": "B",
+      "name": "Bioengineering"
+    },
+    {
+      "abrv": "BGGN",
+      "id": "B",
+      "name": "Biology/Grad/General"
+    },
+    {
+      "abrv": "BGSE",
+      "id": "B",
+      "name": "Biology/Grad/Seminar"
+    },
+    {
+      "abrv": "BIBC",
+      "id": "B",
+      "name": "Biology/Biochemistry"
+    },
+    {
+      "abrv": "BICD",
+      "id": "B",
+      "name": "Biol/Genetics,Cellular and Develop"
+    },
+    {
+      "abrv": "BIEB",
+      "id": "B",
+      "name": "Biol/Ecology, Behavior, and Evol"
+    },
+    {
+      "abrv": "BILD",
+      "id": "B",
+      "name": "Biology/Lower Division"
+    },
+    {
+      "abrv": "BIMM",
+      "id": "B",
+      "name": "Biology/Molec Biol, Microbiol"
+    },
+    {
+      "abrv": "BIOM",
+      "id": "B",
+      "name": "Biomedical Sciences"
+    },
+    {
+      "abrv": "BIPN",
+      "id": "B",
+      "name": "Biology/Animal Physiol and Neurosc"
+    },
+    {
+      "abrv": "BISP",
+      "id": "B",
+      "name": "Biology/Special Studies"
+    },
+    {
+      "abrv": "BNFO",
+      "id": "B",
+      "name": "Bioinformatics"
+    },
+    {
+      "abrv": "CAT",
+      "id": "C",
+      "name": "Culture, Art, and Technology"
+    },
+    {
+      "abrv": "CENG",
+      "id": "C",
+      "name": "Chemical Engineering"
+    },
+    {
+      "abrv": "CGS",
+      "id": "C",
+      "name": "Critical Gender Studies"
+    },
+    {
+      "abrv": "CHEM",
+      "id": "C",
+      "name": "Chemistry and Biochemistry"
+    },
+    {
+      "abrv": "CHIN",
+      "id": "C",
+      "name": "Chinese Studies"
+    },
+    {
+      "abrv": "CLIN",
+      "id": "C",
+      "name": "Clinical Psychology"
+    },
+    {
+      "abrv": "CLRE",
+      "id": "C",
+      "name": "Clinical Research"
+    },
+    {
+      "abrv": "CLSS",
+      "id": "C",
+      "name": "Classics"
+    },
+    {
+      "abrv": "CMM",
+      "id": "C",
+      "name": "Cellular and Molecular Medicine"
+    },
+    {
+      "abrv": "COGR",
+      "id": "C",
+      "name": "Communication/Graduate"
+    },
+    {
+      "abrv": "COGS",
+      "id": "C",
+      "name": "Cognitive Science"
+    },
+    {
+      "abrv": "COMM",
+      "id": "C",
+      "name": "Communication"
+    },
+    {
+      "abrv": "CONT",
+      "id": "C",
+      "name": "Contemporary Issues"
+    },
+    {
+      "abrv": "CSE",
+      "id": "C",
+      "name": "Computer Science and Engineering"
+    },
+    {
+      "abrv": "DOC",
+      "id": "D",
+      "name": "Dimensions of Culture"
+    },
+    {
+      "abrv": "DSE",
+      "id": "D",
+      "name": "Data Science and Engineering"
+    },
+    {
+      "abrv": "EAP",
+      "id": "E",
+      "name": "Education Abroad Program"
+    },
+    {
+      "abrv": "ECE",
+      "id": "E",
+      "name": "Electrical and Computer Engineer"
+    },
+    {
+      "abrv": "ECON",
+      "id": "E",
+      "name": "Economics"
+    },
+    {
+      "abrv": "EDS",
+      "id": "E",
+      "name": "Education Studies"
+    },
+    {
+      "abrv": "EMED",
+      "id": "E",
+      "name": "Emergency Medicine"
+    },
+    {
+      "abrv": "ENG",
+      "id": "E",
+      "name": "Engineering"
+    },
+    {
+      "abrv": "ENVR",
+      "id": "E",
+      "name": "Environmental Studies"
+    },
+    {
+      "abrv": "ERC",
+      "id": "E",
+      "name": "Eleanor Roosevelt College"
+    },
+    {
+      "abrv": "ESYS",
+      "id": "E",
+      "name": "Environmental Systems"
+    },
+    {
+      "abrv": "ETHN",
+      "id": "E",
+      "name": "Ethnic Studies"
+    },
+    {
+      "abrv": "EXPR",
+      "id": "E",
+      "name": "Exchange Programs"
+    },
+    {
+      "abrv": "FILM",
+      "id": "F",
+      "name": "Film Studies"
+    },
+    {
+      "abrv": "FPM",
+      "id": "F",
+      "name": "Family and Preventive Medicine"
+    },
+    {
+      "abrv": "FPMU",
+      "id": "F",
+      "name": "Family and Prev Med Undergraduate"
+    },
+    {
+      "abrv": "GLBH",
+      "id": "G",
+      "name": "Global Health"
+    },
+    {
+      "abrv": "HIAF",
+      "id": "H",
+      "name": "History of Africa"
+    },
+    {
+      "abrv": "HIEA",
+      "id": "H",
+      "name": "History of East Asia"
+    },
+    {
+      "abrv": "HIEU",
+      "id": "H",
+      "name": "History of Europe"
+    },
+    {
+      "abrv": "HIGR",
+      "id": "H",
+      "name": "History, Graduate"
+    },
+    {
+      "abrv": "HDP",
+      "id": "H",
+      "name": "Human Development Program"
+    },
+    {
+      "abrv": "HILA",
+      "id": "H",
+      "name": "History of Latin America"
+    },
+    {
+      "abrv": "HILD",
+      "id": "H",
+      "name": "History, Lower Division"
+    },
+    {
+      "abrv": "HINE",
+      "id": "H",
+      "name": "History of the Near East"
+    },
+    {
+      "abrv": "HISC",
+      "id": "H",
+      "name": "History of Science"
+    },
+    {
+      "abrv": "HITO",
+      "id": "H",
+      "name": "History Topics"
+    },
+    {
+      "abrv": "HIUS",
+      "id": "H",
+      "name": "History of the United States"
+    },
+    {
+      "abrv": "HLAW",
+      "id": "H",
+      "name": "Health Law"
+    },
+    {
+      "abrv": "HMNR",
+      "id": "H",
+      "name": "Human Rights"
+    },
+    {
+      "abrv": "HUM",
+      "id": "H",
+      "name": "Humanities"
+    },
+    {
+      "abrv": "ICAM",
+      "id": "C",
+      "name": "Computing and the Arts"
+    },
+    {
+      "abrv": "INTL",
+      "id": "I",
+      "name": "International Studies"
+    },
+    {
+      "abrv": "IRCO",
+      "id": "I",
+      "name": "Intrnat Relat/Pac Study-Core"
+    },
+    {
+      "abrv": "IRGN",
+      "id": "I",
+      "name": "Intrnat Relat/Pac Study-Generl"
+    },
+    {
+      "abrv": "IRLA",
+      "id": "I",
+      "name": "Intrnat Relat/Pac Study-Lang"
+    },
+    {
+      "abrv": "JAPN",
+      "id": "J",
+      "name": "Japanese Studies"
+    },
+    {
+      "abrv": "JUDA",
+      "id": "J",
+      "name": "Judaic Studies"
+    },
+    {
+      "abrv": "LATI",
+      "id": "L",
+      "name": "Latin American Studies"
+    },
+    {
+      "abrv": "LAWS",
+      "id": "L",
+      "name": "Law and Society"
+    },
+    {
+      "abrv": "LHCO",
+      "id": "L",
+      "name": "Leadership/Health Care Organiz"
+    },
+    {
+      "abrv": "LIAB",
+      "id": "L",
+      "name": "Linguistics/Arabic"
+    },
+    {
+      "abrv": "LIDS",
+      "id": "L",
+      "name": "Linguistics/Directed Stdy-Lang"
+    },
+    {
+      "abrv": "LIFR",
+      "id": "L",
+      "name": "Linguistics/French"
+    },
+    {
+      "abrv": "LIGM",
+      "id": "L",
+      "name": "Linguistics/German"
+    },
+    {
+      "abrv": "LIGN",
+      "id": "L",
+      "name": "Linguistics/General"
+    },
+    {
+      "abrv": "LIHL",
+      "id": "L",
+      "name": "Linguistics/Heritage Languages"
+    },
+    {
+      "abrv": "LIIT",
+      "id": "L",
+      "name": "Linguistics/Italian"
+    },
+    {
+      "abrv": "LIPO",
+      "id": "L",
+      "name": "Linguistics/Portuguese"
+    },
+    {
+      "abrv": "LISL",
+      "id": "L",
+      "name": "Linguistics/Amer Sign Language"
+    },
+    {
+      "abrv": "LISP",
+      "id": "L",
+      "name": "Linguistics/Spanish"
+    },
+    {
+      "abrv": "LTCO",
+      "id": "L",
+      "name": "Literature/Comparative"
+    },
+    {
+      "abrv": "LTCS",
+      "id": "L",
+      "name": "Literature/Cultural Studies"
+    },
+    {
+      "abrv": "LTEA",
+      "id": "L",
+      "name": "Literatures/East Asian"
+    },
+    {
+      "abrv": "LTEN",
+      "id": "L",
+      "name": "Literatures in English"
+    },
+    {
+      "abrv": "LTEU",
+      "id": "L",
+      "name": "Literature/European and Eurasian"
+    },
+    {
+      "abrv": "LTFR",
+      "id": "L",
+      "name": "Literature/French"
+    },
+    {
+      "abrv": "LTGK",
+      "id": "L",
+      "name": "Literature/Greek"
+    },
+    {
+      "abrv": "LTGM",
+      "id": "L",
+      "name": "Literature/German"
+    },
+    {
+      "abrv": "LTIT",
+      "id": "L",
+      "name": "Literature/Italian"
+    },
+    {
+      "abrv": "LTKO",
+      "id": "L",
+      "name": "Literature/Korean"
+    },
+    {
+      "abrv": "LTLA",
+      "id": "L",
+      "name": "Literature/Latin"
+    },
+    {
+      "abrv": "LTRU",
+      "id": "L",
+      "name": "Literature/Russian"
+    },
+    {
+      "abrv": "LTSP",
+      "id": "L",
+      "name": "Literature/Spanish"
+    },
+    {
+      "abrv": "LTTH",
+      "id": "L",
+      "name": "Literature/Theory"
+    },
+    {
+      "abrv": "LTWL",
+      "id": "L",
+      "name": "Literatures of the World"
+    },
+    {
+      "abrv": "LTWR",
+      "id": "L",
+      "name": "Literature/Writing"
+    },
+    {
+      "abrv": "MAE",
+      "id": "M",
+      "name": "Mechanical and Aerospace Engin"
+    },
+    {
+      "abrv": "MATH",
+      "id": "M",
+      "name": "Mathematics"
+    },
+    {
+      "abrv": "MATS",
+      "id": "M",
+      "name": "Materials Sci and Engineering"
+    },
+    {
+      "abrv": "MBC",
+      "id": "M",
+      "name": "MarineBiodiversity and Conservatn"
+    },
+    {
+      "abrv": "MCWP",
+      "id": "M",
+      "name": "Muir College Writing Program"
+    },
+    {
+      "abrv": "MDE",
+      "id": "M",
+      "name": "Medical Device Engineering"
+    },
+    {
+      "abrv": "MED",
+      "id": "M",
+      "name": "Medicine"
+    },
+    {
+      "abrv": "MGT",
+      "id": "R",
+      "name": "Rady School of Management"
+    },
+    {
+      "abrv": "MGTF",
+      "id": "R",
+      "name": "Rady Sch of Management Finance"
+    },
+    {
+      "abrv": "MMW",
+      "id": "M",
+      "name": "Making of the Modern World"
+    },
+    {
+      "abrv": "MSED",
+      "id": "M",
+      "name": "Mathematics and Science Educ"
+    },
+    {
+      "abrv": "MUIR",
+      "id": "M",
+      "name": "Muir College"
+    },
+    {
+      "abrv": "MUS",
+      "id": "M",
+      "name": "Music"
+    },
+    {
+      "abrv": "NANO",
+      "id": "N",
+      "name": "NanoEngineering"
+    },
+    {
+      "abrv": "NEU",
+      "id": "N",
+      "name": "Neurosciences"
+    },
+    {
+      "abrv": "OPTH",
+      "id": "O",
+      "name": "Ophthalmology"
+    },
+    {
+      "abrv": "ORTH",
+      "id": "O",
+      "name": "Orthopaedics"
+    },
+    {
+      "abrv": "PATH",
+      "id": "P",
+      "name": "Pathology"
+    },
+    {
+      "abrv": "PEDS",
+      "id": "P",
+      "name": "Pediatrics"
+    },
+    {
+      "abrv": "PHAR",
+      "id": "P",
+      "name": "Pharmacology"
+    },
+    {
+      "abrv": "PHIL",
+      "id": "P",
+      "name": "Philosophy"
+    },
+    {
+      "abrv": "PHYS",
+      "id": "P",
+      "name": "Physics"
+    },
+    {
+      "abrv": "POLI",
+      "id": "P",
+      "name": "Political Science"
+    },
+    {
+      "abrv": "PSY",
+      "id": "P",
+      "name": "Psychiatry"
+    },
+    {
+      "abrv": "PSYC",
+      "id": "P",
+      "name": "Psychology"
+    },
+    {
+      "abrv": "RAD",
+      "id": "R",
+      "name": "Radiology"
+    },
+    {
+      "abrv": "RELI",
+      "id": "R",
+      "name": "Religion, Study of"
+    },
+    {
+      "abrv": "REV",
+      "id": "R",
+      "name": "Revelle College"
+    },
+    {
+      "abrv": "RMAS",
+      "id": "R",
+      "name": "Radiation Med and Applied Sci"
+    },
+    {
+      "abrv": "RMED",
+      "id": "R",
+      "name": "Reproductive Medicine"
+    },
+    {
+      "abrv": "SDCC",
+      "id": "S",
+      "name": "San Diego Community College"
+    },
+    {
+      "abrv": "SE",
+      "id": "S",
+      "name": "Structural Engineering"
+    },
+    {
+      "abrv": "SIO",
+      "id": "S",
+      "name": "Scripps Inst of Oceanography"
+    },
+    {
+      "abrv": "SIOB",
+      "id": "S",
+      "name": "Scripps Inst of Oceanogr/OBP"
+    },
+    {
+      "abrv": "SIOC",
+      "id": "S",
+      "name": "Scripps Inst of Oceanogr/COAP"
+    },
+    {
+      "abrv": "SIOG",
+      "id": "S",
+      "name": "Scripps Inst of Oceanogr/GEO"
+    },
+    {
+      "abrv": "SOCE",
+      "id": "S",
+      "name": "Soc/Ind Research and Honors Prog"
+    },
+    {
+      "abrv": "SOCG",
+      "id": "S",
+      "name": "Soc/Graduate"
+    },
+    {
+      "abrv": "SOCI",
+      "id": "S",
+      "name": "Sociology"
+    },
+    {
+      "abrv": "SOMC",
+      "id": "S",
+      "name": "School of Medicine Core Crses"
+    },
+    {
+      "abrv": "SOMI",
+      "id": "S",
+      "name": "Sch of Med Interdisciplinary"
+    },
+    {
+      "abrv": "SPPS",
+      "id": "P",
+      "name": "Pharmacy"
+    },
+    {
+      "abrv": "SURG",
+      "id": "S",
+      "name": "Surgery"
+    },
+    {
+      "abrv": "TDAC",
+      "id": "T",
+      "name": "Theatre / Acting"
+    },
+    {
+      "abrv": "TDCH",
+      "id": "D",
+      "name": "Dance/Choreography"
+    },
+    {
+      "abrv": "TDDE",
+      "id": "T",
+      "name": "Theatre / Design"
+    },
+    {
+      "abrv": "TDDR",
+      "id": "T",
+      "name": "Theatre / Directing and Stage Mgmt"
+    },
+    {
+      "abrv": "TDGE",
+      "id": "T",
+      "name": "Theatre / General"
+    },
+    {
+      "abrv": "TDGR",
+      "id": "T",
+      "name": "Theatre / Graduate"
+    },
+    {
+      "abrv": "TDHD",
+      "id": "D",
+      "name": "Dance/History"
+    },
+    {
+      "abrv": "TDHT",
+      "id": "T",
+      "name": "Theatre / History and Theory"
+    },
+    {
+      "abrv": "TDMV",
+      "id": "D",
+      "name": "Dance/Movement"
+    },
+    {
+      "abrv": "TDPF",
+      "id": "D",
+      "name": "Dance/Performance"
+    },
+    {
+      "abrv": "TDPR",
+      "id": "T",
+      "name": "Theatre Dance/Practicum"
+    },
+    {
+      "abrv": "TDPW",
+      "id": "T",
+      "name": "Theatre / Playwriting"
+    },
+    {
+      "abrv": "TDTR",
+      "id": "D",
+      "name": "Dance/Theory"
+    },
+    {
+      "abrv": "TMC",
+      "id": "T",
+      "name": "Thurgood Marshall College"
+    },
+    {
+      "abrv": "TWS",
+      "id": "T",
+      "name": "Third World Studies"
+    },
+    {
+      "abrv": "USP",
+      "id": "U",
+      "name": "Urban Studies and Planning"
+    },
+    {
+      "abrv": "VIS",
+      "id": "V",
+      "name": "Visual Arts"
+    },
+    {
+      "abrv": "WARR",
+      "id": "W",
+      "name": "Warren College"
+    },
+    {
+      "abrv": "WCWP",
+      "id": "W",
+      "name": "Warren College Writing Program"
+    },
+    {
+      "abrv": "WES",
+      "id": "W",
+      "name": "Wireless Embedded Systems"
+    }
+  ]
+}
