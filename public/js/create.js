@@ -151,7 +151,7 @@ Description: 	Keep track of the time for a LE, DI, LA, or FI.
 */
 class Timeinfo{
 	/* 
-		days(string): 	the weekdays, TuTH, MWF, etc.
+		days(string[]): the weekdays, ["Tu", "TH"]
 		startTime(int): the start time
 		endTime(int): 	the end time
 			note:start time and end time should be converted
@@ -162,7 +162,7 @@ class Timeinfo{
 
 	*/
 	constructor(days, startTime, endTime, room, roomNum){
-		this,days = days;
+		this.days = days;
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.room = room;
@@ -180,9 +180,51 @@ class Timeinfo{
 
 			add(array of array of Timeinfo):
 				the time to be added.
+
+	need to check the emptiness of the LE, DI, LA
+
+	Output: True if conflict
+			False if not
 */
-function checkConflicts( current, add ){
-	/* TO BE WRITTEN */
+function checkConflicts( current, add ){	
+	/* 	add only has one element, and that is the array
+		of timeinfo */
+
+	let addTimeInfo = add[0];
+
+	console.log("Checking Conflicts");
+
+	for( let time of addTimeInfo ){ // the timeinfo of class we are checking
+		for( let curr of current ){ // the timeinfo array 
+			for( let currTime of curr ){ // the timeinfo of curr schedule
+				if( currTime != "" && time != "" ){ // only can access element if they are not ""
+					/*
+					console.log("Printing currTime and time");
+					console.log(currTime);
+					console.log(time);
+					console.log("Printing start and end time");
+					console.log(time.startTime);
+					console.log(time.endTime);
+					console.log("Printing Days");
+					console.log(time.days);
+					*/
+					
+					if ( time.startTime < currTime.endTime 
+						&& time.startTime > currTime.startTime){
+						for( let addDay of time.days ){
+							for( let currDay of currTime.days ){
+									if( addDay == currDay ){
+										return true;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return false;
 }
 
 
@@ -224,15 +266,19 @@ function allSchedule( classes ){
 			else{
 				for( let s of schedules ){
 					/* check for time conflict */
-					checkConflict(s, [time]);
-
-					let timeArray = s.concat([time]);
-					tempSched.push(timeArray);
+					if( checkConflicts(s, [time]) == false ){
+						let timeArray = s.concat([time]);
+						tempSched.push(timeArray);
+					}
 				}
 			}
 		}
 		schedules = tempSched;
 		tempSched = [];
+	}
+
+	if( schedules.length == 0){
+		console.log("schedule conflict");
 	}
 
 	/* 	need to check if the result is the correct schedule.
@@ -244,10 +290,15 @@ function allSchedule( classes ){
 
 
 /* TEST DATA */
-let time1 = new Timeinfo("TTH", 1000, 1200, "CENTER", "105");
+let time1 = new Timeinfo(["T", "TH"], 1000, 1200, "CENTER", "105");
+/* conflict*/
+let time2 = new Timeinfo(["T", "TH"], 1100, 1300, "CENTER", "105");
 let class1 = new Class("100", "CSE", [""], [""], [""], [""]);
+let class2 = new Class("100", "CSE", [""], [""], [""], [""]);
 class1.addTime("LE", time1);
+class2.addTime("DI", time2);
 class1.possibleTime();
-
-let classes = [class1.possibleTime()];
-allSchedule(classes);
+let classes = [];
+classes.push(class1.possibleTime());
+classes.push(class2.possibleTime());
+let schedules = allSchedule(classes);
