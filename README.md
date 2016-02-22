@@ -10,11 +10,16 @@ Note:
 	should be fine for now.
 2. app.js will also be copied over from lab6.
 
-Plan:
-1. Once the server is moved to heroku, need to convert
-html to handlebar.
-2. Find a way to implement our navbar
-3. 
+Todo:
+1. Search and auto complete
+2. Create sample json 
+3. parse json
 
-use this 
+Partial fix:
 <a href="{{previous_link}}">{{previous_link_name}}</a>
+
+Testing JS:
+		To test js using REPL, first vagrant up.
+		Make sure you have npm installed on your vagrant.
+		then type "node", this should start REPL.
+		do .load public/js/create.js to load the file

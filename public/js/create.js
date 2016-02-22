@@ -8,14 +8,6 @@ $(document).ready(function() {
 function initializePage() {
 	
 }
-/*
-Note: 	To run this code using REPL, first vagrant up.
-		Make sure you have npm installed on your vagrant.
-		then type "node", this should start REPL.
-		do .load public/js/create.js to load the file
-
-*/
-
 
 /*
 Name: class Class
@@ -139,7 +131,6 @@ class Section extends Class{
 		this.section = section;
 		this.instructor = instructor;
 	}
-
 }
 
 
@@ -223,7 +214,6 @@ function checkConflicts( current, add ){
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -280,10 +270,6 @@ function allSchedule( classes ){
 	if( schedules.length == 0){
 		console.log("schedule conflict");
 	}
-
-	/* 	need to check if the result is the correct schedule.
-	*/
-	/* TO BE WRITTEN*/
 
 	return schedules;
 }
