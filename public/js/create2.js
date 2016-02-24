@@ -1,13 +1,49 @@
 'use strict';
 
 // Call this function when the page loads (the "ready" event)
-/*$(document).ready(function() {
+$(document).ready(function() {
 	initializePage();
 });
 
 function initializePage() {
+	createCalendarTable(800, 2000); // start end
 	
-}*/
+	/* TEST DATA */
+	var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'101'});
+	var t1 = new Time({'days':['M', 'Tu', 'W', 'Th', 'F'], 'start':800, 'end':900});
+	var sect1 = new Section({'time':t1});
+	var t1_d1 = new Time({'days':['F'], 'start':930, 'end':1030});
+	var disc1 = new Discussion({'time':t1_d1});
+	class1.addSection(sect1);
+	sect1.addDiscussion(disc1);
+
+	var class2 = new Class({'name':'Ops', 'sub':'CSE', 'num':'120'});
+	var t2 = new Time({'days':['M', 'W'], 'start':900, 'end':1030});
+	var sect2 = new Section({'time':t2});
+	var t2_l2 = new Time({'days':['Tu', 'Th'], 'start':1030, 'end':1230});
+	var lab2 = new Lab({'time':t2_l2});
+	class2.addSection(sect2);
+	sect2.addLab(lab2);
+
+	var class3 = new Class({'name':'Ai', 'sub':'CSE', 'num':'150'});
+	var t3 = new Time({'days':['M', 'W'], 'start':1100, 'end':1200});
+	var sect3 = new Section({'time':t3});
+	class3.addSection(sect3);
+
+	var arrange1 = class1.arrangements();
+	var arrange2 = class2.arrangements();
+	var arrange3 = class3.arrangements();
+
+	var start = Date.now();
+	var s = generateSchedules([arrange1, arrange2, arrange3]);
+	var runtime = Date.now() - start;
+	console.log(s);
+	console.log(runtime);
+	
+	for(var i in s) {	
+		createCalendar(s[i], i);
+	}
+}
 
 /*
 	==== Class =========================
@@ -230,23 +266,41 @@ function generateSchedules(classesArranges) { // list of arrangements
 	return schedules;
 }
 
-/* TEST DATA */
-var t1 = new Time({'days':['M', 'W', 'F'], 'start':900, 'end':1000});
-var t2 = new Time({'days':['M', 'W', 'F'], 'start':1030, 'end':1130});	  
-var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'100'});
-var class2 = new Class({'name':'Ops', 'sub':'CSE', 'num':'120'});
-var sect1 = new Section({'time':t1});
-var sect2 = new Section({'time':t2});
-class1.addSection(sect1);
-class2.addSection(sect2);
-var arrange1 = class1.arrangements();
-var arrange2 = class2.arrangements();
+function createCalendarTable(start, end) { // only generate on the hour
+	if(start % 100 != 0) {
+		start = start - (start % 100);
+	}
+	if(end % 100 != 0) {
+		end = end + (end % 100);
+	}
+	
+	var numOfCells = (end - start) / 100;
+	
+	for(var i = 0; i < numOfCells; i++) {
+		var timeStr = i + 8;
+		var pad = '';
+		var am_pm = 'a';
+		if(timeStr >= 12)
+			am_pm = 'p';
+		if(timeStr > 12)
+			timeStr -= 12;
+		if(timeStr < 10)
+			pad = '0';
+		
+		var timeStrA = pad + timeStr.toString() + ':00' + am_pm;
+		var timeStrB = pad + timeStr.toString() + ':30' + am_pm;
 
-var start = Date.now();
-for(var i = 0; i < 10000; i++) {
-	var s = generateSchedules([arrange1, arrange2]);
+		var newACell = '<div class="row half-hour-cell-a"><div class="col-xs-4"><text>' + timeStrA + '</text></div></div>';
+		var newBCell = '<div class="row half-hour-cell-b"><div class="col-xs-4"><text>' + timeStrB + '</text></div></div>';
+		
+		$('.daily-timecells').append($(newACell), $(newBCell));
+	}
 }
-var runtime = Date.now() - start;
-console.log(s);
-console.log(runtime);
+
+function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
+	// add paging functionality for each schedule number, i
+	for(var aClass of s.arrangement) {
+		
+	}
+}
 
