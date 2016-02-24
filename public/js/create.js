@@ -183,7 +183,7 @@ function checkConflicts( current, add ){
 
 	let addTimeInfo = add[0];
 
-	console.log("Checking Conflicts");
+	//console.log("Checking Conflicts");
 
 	for( let time of addTimeInfo ){ // the timeinfo of class we are checking
 		for( let curr of current ){ // the timeinfo array 
@@ -278,7 +278,7 @@ function allSchedule( classes ){
 /* TEST DATA */
 let time1 = new Timeinfo(["T", "TH"], 1000, 1200, "CENTER", "105");
 /* conflict*/
-let time2 = new Timeinfo(["T", "TH"], 1100, 1300, "CENTER", "105");
+let time2 = new Timeinfo(["T", "TH"], 1300, 1400, "CENTER", "105");
 let class1 = new Class("100", "CSE", [""], [""], [""], [""]);
 let class2 = new Class("100", "CSE", [""], [""], [""], [""]);
 class1.addTime("LE", time1);
@@ -287,4 +287,10 @@ class1.possibleTime();
 let classes = [];
 classes.push(class1.possibleTime());
 classes.push(class2.possibleTime());
-let schedules = allSchedule(classes);
+
+var start = Date.now();
+for(var i = 0; i < 10000; i++) {
+	let schedules = allSchedule(classes);
+}
+var runtime = Date.now() - start;
+console.log(runtime);

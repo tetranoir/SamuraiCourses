@@ -13,9 +13,9 @@ function initializePage() {
 	==== Class =========================
 */
 var Class = function(data) {
-	this.crsName = data.crsName;
-	this.crsNum = data.crsNum;
-	this.crsSub = data.crsSub;
+	this.name = data.name;
+	this.num = data.num;
+	this.sub = data.sub;
 	this.sections = []; // list of Sections
 };
 
@@ -25,6 +25,7 @@ Class.prototype.addSection = function(section) {
 
 Class.prototype.arrangements = function() {
 	var arranges = [];
+	var sections = this.sections;
 	
 	for(var i in sections) {
 		if(sections[i].discussions == false) {
@@ -61,7 +62,7 @@ Section.prototype.addDiscussion = function(discussion) {
 	this.discussions.push(discussion);
 };
 	
-Section.prototype.addLab(lab) {
+Section.prototype.addLab = function(lab) {
 	this.labs.push(lab);
 };
 /*
@@ -89,7 +90,7 @@ var Location = function(data) {
 	==== Time ==========================
 */
 var Time = function(data) {
-	this.days = data.days; // list of strings, eg ["Tu", "Th"]
+	this.days = data.days || []; // list of strings, eg ["Tu", "Th"]
 	this.start = data.start; // start time, eg 800 for 8:00am
 	this.end = data.end; // end time, eg 1300 for 1:00pm
 };
@@ -106,7 +107,7 @@ var Schedule = function() {
 	this.arrangement = []; // list of arrangements of {sect, di, lab} per class
 }
 
-Schedule.prototype.copy(toCopy) {
+Schedule.prototype.copy = function(toCopy) {
 	this.M = toCopy.M.slice();
 	this.Tu = toCopy.Tu.slice();
 	this.W = toCopy.W.slice();
@@ -115,93 +116,95 @@ Schedule.prototype.copy(toCopy) {
 	this.arrangement = toCopy.arrangement.slice();
 }
 
+Schedule.prototype.checkDay = function(day, time) {
+	switch(day) {
+		case "M":
+			for(var t of this.M)
+				if(time.end > t.start && time.start < t.end)
+					return false;
+			break;
+		case "Tu":
+			for(var t of this.Tu)
+				if(time.end > t.start && time.start < t.end)
+					return false;
+			break;
+		case "W":
+			for(var t of this.W)
+				if(time.end > t.start && time.start < t.end)
+					return false;
+			break;
+		case "Th":
+			for(var t of this.Th)
+				if(time.end > t.start && time.start < t.end)
+					return false;
+			break;
+		case "F":
+			for(var t of this.F)
+				if(time.end > t.start && time.start < t.end)
+					return false;
+			break;
+		default:
+			console.log(day + " is not a recognized day");
+			return false;
+			break;
+	}
+	return true;
+}
+
 //Returns true or false depending on if the section fits with the schedule
 Schedule.prototype.addArrange = function(arrangement) {
 	var sect = arrangement.section.time;
-	var di = arrangement.di.time;
-	var lab = arrangement.lab.time;
+	var di = arrangement.di.time || new Time({});
+	var lab = arrangement.lab.time || new Time({});
 	
 	for(var day of sect.days) {
-		if(!self.checkDay(day, sect))
+		if(!this.checkDay(day, sect))
 			return false;
 	}
 	for(var day of di.days) {
-		if(!self.checkDay(day, di))
+		if(!this.checkDay(day, di))
 			return false;
 	}
 	for(var day of lab.days) {
-		if(!self.checkDay(day, lab))
+		if(!this.checkDay(day, lab))
 			return false;
 	}
 	
 	for(var day of sect.days) {
-		self.addDay(day, sect);
+		this.addDay(day, sect);
 	}
 	for(var day of di.days) {
-		self.addDay(day, di);
+		this.addDay(day, di);
 	}
 	for(var day of lab.days) {
-		self.addDay(day, lab);
+		this.addDay(day, lab);
 	}
-	self.arrangement.push(arrangement);
+	this.arrangement.push(arrangement);
 	
 	return true;
 };
 
-Schedule.prototype.addDay(Day, time) {
+Schedule.prototype.addDay = function(day, time) {
 	switch(day) {
 		case "M":
-			self.M.push(time);
+			this.M.push(time);
 			break;
 		case "Tu":
-			self.Tu.push(time);
+			this.Tu.push(time);
 			break;
 		case "W":
-			self.W.push(time);
+			this.W.push(time);
+			break;
 		case "Th":
-			self.Th.push(time);
+			this.Th.push(time);
+			break;
 		case "F":
-			self.F.push(time);
+			this.F.push(time);
 			break;
 		default:
 			console.log(day + " is not a recognized day");
 			break;
 	}
-}
-
-Schedule.prototype.checkDay(day, time) {
-	switch(day) {
-		case "M":
-			for(var t in self.M)
-				if(time.end > t.start && time.start < t.end)
-					return false;
-			break;
-		case "Tu":
-			for(var t in self.Tu)
-				if(time.end > t.start && time.start < t.end)
-					return false;
-			break;
-		case "W":
-			for(var t in self.W)
-				if(time.end > t.start && time.start < t.end)
-					return false;
-			break;
-		case "Th":
-			for(var t in self.Th)
-				if(time.end > t.start && time.start < t.end)
-					return false;
-			break;
-		case "F":
-			for(var t in self.F)
-				if(time.end > t.start && time.start < t.end)
-					return false;
-			break;
-		default:
-			console.log(day + " is not a recognized day");
-			return false;
-			break;
-	}
-	return true;
 }
 
 // i is the class number, s is the schedule
@@ -210,6 +213,7 @@ function backtracking(i, classes, s, solns) {
 		solns.push(s);
 		return;
 	}
+
 	for(var arrange of classes[i]) {
 		var newS = new Schedule();
 		newS.copy(s);
@@ -219,22 +223,30 @@ function backtracking(i, classes, s, solns) {
 	}
 }
 
-function generateSchedules(classes) { // class is a list of arrangements
+function generateSchedules(classesArranges) { // list of arrangements
 	var s = new Schedule();
 	var schedules = [];
-	backtracking(0, classes, s, schedules);
+	backtracking(0, classesArranges, s, schedules);
+	return schedules;
 }
 
 /* TEST DATA */
-let time1 = new Timeinfo(["T", "TH"], 1000, 1200, "CENTER", "105");
-/* conflict*/
-let time2 = new Timeinfo(["T", "TH"], 1100, 1300, "CENTER", "105");
-let class1 = new Class("100", "CSE", [""], [""], [""], [""]);
-let class2 = new Class("100", "CSE", [""], [""], [""], [""]);
-class1.addTime("LE", time1);
-class2.addTime("DI", time2);
-class1.possibleTime();
-let classes = [];
-classes.push(class1.possibleTime());
-classes.push(class2.possibleTime());
-let schedules = allSchedule(classes);
+var t1 = new Time({'days':['M', 'W', 'F'], 'start':900, 'end':1000});
+var t2 = new Time({'days':['M', 'W', 'F'], 'start':1030, 'end':1130});	  
+var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'100'});
+var class2 = new Class({'name':'Ops', 'sub':'CSE', 'num':'120'});
+var sect1 = new Section({'time':t1});
+var sect2 = new Section({'time':t2});
+class1.addSection(sect1);
+class2.addSection(sect2);
+var arrange1 = class1.arrangements();
+var arrange2 = class2.arrangements();
+
+var start = Date.now();
+for(var i = 0; i < 10000; i++) {
+	var s = generateSchedules([arrange1, arrange2]);
+}
+var runtime = Date.now() - start;
+console.log(s);
+console.log(runtime);
+
