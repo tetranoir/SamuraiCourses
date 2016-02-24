@@ -29,8 +29,9 @@ class Class{
 		LA = Lab		FI = Final
 		LEtime, DItime, LAtime, FItime: array of instances of Timeinfo
 	*/
-	constructor(crsNum, crsName, LEtime, DItime,
+	constructor(subject, crsNum, crsName, LEtime, DItime,
 		LAtime, FItime){
+		this.subject = subject;
 		this.crsNum = crsNum;
 		this.crsName = crsName;
 		this.LEtime = LEtime;
@@ -288,3 +289,20 @@ let classes = [];
 classes.push(class1.possibleTime());
 classes.push(class2.possibleTime());
 let schedules = allSchedule(classes);
+
+/*
+sample json:
+{
+	subject: "CSE"
+	courseNum: 3
+	courseName: "Fluency/Information Technolog"
+	LE: 
+	crsNum, crsName, LEtime, DItime,
+		LAtime, FItime	
+
+	days: ["M", "W", "F"]
+	startTime: 1000
+	endTime: 1050
+	room: "CENTR"
+	roomNum: "105"
+}*/
