@@ -88,10 +88,20 @@
 	text-align: right;
 }
 
+.half-hour-cell-a > div > text {
+	position: relative;
+	top: -20px;
+}
+
 .half-hour-cell-b {
 	padding-top: 10px;
 	background-color: #FFFFFF;
 	text-align: right;
+}
+
+.half-hour-cell-b > div > text {
+	position: relative;
+	top: -20px;
 }
 
 .nav-pills > li > a {
@@ -117,6 +127,10 @@
 	left: 0px;
 	width: 100%;
 	/*border: 1px solid black;*/
+}
+
+.tab-content  > div > .row > a > div {
+	position: absolute; 
 }
 
 .class-info {
