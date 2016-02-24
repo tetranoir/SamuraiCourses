@@ -345,7 +345,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			var top = (aClass[part].time.start - 800) / 100 * 60; // in px
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
 			
-			var classBlock = '<a href="#" data-toggle="modal" data-target="#class1info"><div class="col-xs-offset-4 col-xs-4 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
+			var classBlock = '<a href="#" data-toggle="modal" data-target="#class1info"><div class="col-xs-offset-4 col-xs-6 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
 			for(var day of aClass[part].time.days) {
 				var dayId = "monday";
 				switch(day) {
