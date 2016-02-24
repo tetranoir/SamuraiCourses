@@ -129,13 +129,7 @@
 	/*border: 1px solid black;*/
 }
 
-.tab-content  > div > .row > div {
-	border: 1px solid black;
-	position: absolute; 
-}
-
 .tab-content  > div > .row > a > div {
-	border: 1px solid black;
 	position: absolute; 
 }
 

@@ -1,5 +1,14 @@
 'use strict';
+/*
+TODO
+Considerations: have section, discussion, and lab inherit from time so .time can be used to access the time of any of them 
 
+add paging functionality for each schedule number, i
+
+random color from a pool of colors
+#F5A5A5 #A5F5F5 #A5A5F5 #FFFE90 #A5F5A5
+
+*/
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -41,6 +50,7 @@ function initializePage() {
 	console.log(runtime);
 	
 	for(var i in s) {	
+		console.log('calendaring');
 		createCalendar(s[i], i);
 	}
 }
@@ -72,7 +82,8 @@ Class.prototype.arrangements = function() {
 		}
 		for(var j in sections[i].discussions) {
 			for(var k in sections[i].labs) {
-				arranges.push({'section':sections[i],
+				arranges.push({  'self':this,
+							   'section':sections[i],
 								    'di':sections[i].discussions[j],
 								   'lab':sections[i].labs[k]});
 			}
@@ -85,6 +96,7 @@ Class.prototype.arrangements = function() {
 	==== Section =======================
 */
 var Section = function(data) {
+	this.self = 'LE';
 	this.time = data.time; // lecture time
 	this.fin = data.fin; // final time
 	this.sectNum = data.sectNum;
@@ -105,6 +117,7 @@ Section.prototype.addLab = function(lab) {
 	==== Discussion ====================
 */
 var Discussion = function(data) {
+	this.self = 'DI';
 	this.time = data.time;
 	this.location = data.location;
 };
@@ -112,6 +125,7 @@ var Discussion = function(data) {
 	==== Lab ===========================
 */
 var Lab = function(data) {
+	this.self = 'LA';
 	this.time = data.time;
 	this.location = data.location;
 };
@@ -297,10 +311,68 @@ function createCalendarTable(start, end) { // only generate on the hour
 	}
 }
 
+function randColor() {
+	
+}
+randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5'];
+randColor.pick = function() {
+	if(randColor.colors.length == 0) {
+		console.log("No colors left!!!");
+		return '#FFFFFF';
+	}
+	
+	/*var i = Math.floor((Math.random() * randColor.colors.length));
+	var picked = randColor.colors[i];
+	randColor.colors.splice(i, 1);
+	return picked;*/
+	return randColor.colors.pop();
+}
+
+
 function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
-	// add paging functionality for each schedule number, i
 	for(var aClass of s.arrangement) {
-		
+		var color = randColor.pick(); 
+		for(var part in aClass) { // part is section, discussion, or lab
+			if(!aClass[part].time) continue; // so so shoddy
+			
+			if(aClass[part].time.end % 100 != 0) {
+				aClass[part].time.end += 50 - aClass[part].time.end % 100;
+			}
+			if(aClass[part].time.start % 100 != 0) {
+				aClass[part].time.start += 50 - aClass[part].time.start % 100;
+			}
+			var height = (aClass[part].time.end - aClass[part].time.start) / 100 * 60 ; // in px
+			var top = (aClass[part].time.start - 800) / 100 * 60; // in px
+			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
+			
+			var classBlock = '<a href="#" data-toggle="modal" data-target="#class1info"><div class="col-xs-offset-4 col-xs-4 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
+			for(var day of aClass[part].time.days) {
+				var dayId = "monday";
+				switch(day) {
+					case "M":
+						dayId = "monday";
+						break;
+					case "Tu":
+						dayId = "tuesday";
+						break;
+					case "W":
+						dayId = "wednesday";
+						break;
+					case "Th":
+						dayId  = "thursday";
+						break;
+					case "F":
+						dayId = "friday";
+						break;
+					default:
+						console.log(day + " is not a recognized day");
+						break;
+				}
+				$('#' + dayId).find('.row').append($(classBlock));
+			}
+		}
 	}
 }
+
+
 
