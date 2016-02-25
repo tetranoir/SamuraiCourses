@@ -1,0 +1,40 @@
+{
+name:
+num:
+sub:
+sections:[{
+	self:
+	time: {
+		days:[]
+		start:
+		end:
+		}		
+	}
+	fin: {
+		days:[]
+		start:
+		end:
+	}
+	sectNum:
+	prof:
+	location:
+	discussions: [{
+		self:
+		time: {
+			days:[]
+			start:
+			end:
+			}
+		location:
+		}]
+	labs: [{
+		self:
+		time: {
+			days:[]
+			start:
+			end:
+			}
+		location:
+		}]
+	}]	
+}

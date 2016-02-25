@@ -5,11 +5,17 @@ Considerations: have section, discussion, and lab inherit from time so .time can
 
 add paging functionality for each schedule number, i
 
-random color from a pool of colors
-#F5A5A5 #A5F5F5 #A5A5F5 #FFFE90 #A5F5A5
+json file format + data
+
+search
+
+delete
 
 */
-// Call this function when the page loads (the "ready" event)
+
+var s = []; // schedules
+var classes = []; // classes
+
 $(document).ready(function() {
 	initializePage();
 });
@@ -38,13 +44,17 @@ function initializePage() {
 	var t3 = new Time({'days':['M', 'W'], 'start':1100, 'end':1200});
 	var sect3 = new Section({'time':t3});
 	class3.addSection(sect3);
+	
+	classes.push(class1);
+	classes.push(class2);
+	classes.push(class3);
 
 	var arrange1 = class1.arrangements();
 	var arrange2 = class2.arrangements();
 	var arrange3 = class3.arrangements();
 
 	var start = Date.now();
-	var s = generateSchedules([arrange1, arrange2, arrange3]);
+	s = generateSchedules([arrange1, arrange2, arrange3]);
 	var runtime = Date.now() - start;
 	console.log(s);
 	console.log(runtime);
