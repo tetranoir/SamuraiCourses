@@ -43,6 +43,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/create', create.view);
+app.get('/create2', create.view2);
 // get course informations for search
 app.get('/search/courses', create.courseInfo);
 
