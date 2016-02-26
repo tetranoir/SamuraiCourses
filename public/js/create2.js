@@ -56,9 +56,10 @@ function initializePage() {
 	var start = Date.now();
 	s = generateSchedules([arrange1, arrange2, arrange3]);
 	var runtime = Date.now() - start;
+	/*
 	console.log(s);
 	console.log(runtime);
-	
+	*/
 	for(var i in s) {	
 		console.log('calendaring');
 		createCalendar(s[i], i);

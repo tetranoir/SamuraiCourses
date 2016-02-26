@@ -292,7 +292,7 @@ classes.push(class2.possibleTime());
 let schedules = allSchedule(classes);
 
 /*
-sample json:
+sample class json:
 {
 	subject: "CSE"
 	courseNum: 3
@@ -306,7 +306,8 @@ sample json:
 	endTime: 1050
 	room: "CENTR"
 	roomNum: "105"
-}*/
+}
+*/
 
 
 var start = Date.now();
