@@ -1,109 +1,109 @@
 {
   "CSE100":
   {
-    name:"Advance Data Structures", 
-    num:"100",
-    sub:"CSE",
-    description:"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables.\n","Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized\n","Uses C++ and STL. Credit not offered for both Math 176 and CSE 100. Equivalent to Math 176. Recommended preparation: background in C or C++ programming.\n","Prerequisites: CSE 12, CSE 15L, CSE 21 or Math 15B, and CSE 5A or CSE 30 or ECE 15 or MAE 9.\n",
-    sections:
+    "name":"Advance Data Structures", 
+    "num":"100",
+    "sub":"CSE",
+    "description":"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables.\n, Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized\n, Uses C++ and STL. Credit not offered for both Math 176 and CSE 100. Equivalent to Math 176. Recommended preparation: background in C or C++ programming.\n, Prerequisites: CSE 12, CSE 15L, CSE 21 or Math 15B, and CSE 5A or CSE 30 or ECE 15 or MAE 9.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"0800",
-                end:"0850"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"0800",
+                "end":"0850"
               },          
-        fin: {
-                day:"6/04/2016",
-                start:"8:00 am",
-                end:"10:59 am"
+        "fin": {
+                "day":"6/04/2016",
+                "start":"8:00 am",
+                "end":"10:59 am"
              },
-        sectNum:"867309",
-        units:"4",
-        prof:"Christine Alvarado",
-        location:"PRICE THTRE",
-        discussions: 
+        "sectNum":"867309",
+        "units":"4",
+        "prof":"Christine Alvarado",
+        "location":"PRICE THTRE",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"1400",
-                    end:"1500"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"1400",
+                    "end":"1500"
                   },
-            location:"SEQUO 148",
-            discussionNum:"A01"
+            "location":"SEQUO 148",
+            "discussionNum":"A01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"1600",
-                    end:"1700"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"1600",
+                    "end":"1700"
                   },
-            location:"SEQUO 148",
-            discussionNum:"A02"
+            "location":"SEQUO 148",
+            "discussionNum":"A02"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"0900",
-                    end:"1000"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"0900",
+                    "end":"1000"
                   },
-            location:"WLH 2115",
-            discussionNum:"A03"
+            "location":"WLH 2115",
+            "discussionNum":"A03"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"1500",
-                    end:"1600"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"1500",
+                    "end":"1600"
                   },
-            location:"SEQUO 148",
-            discussionNum:"A04"
+            "location":"SEQUO 148",
+            "discussionNum":"A04"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"1100",
-                    end:"1200"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"1100",
+                    "end":"1200"
                   },
-            location:"WLH 2115",
-            discussionNum:"A05"
+            "location":"WLH 2115",
+            "discussionNum":"A05"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"0800",
-                    end:"0900"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"0800",
+                    "end":"0900"
                   },
-            location:"WLH 2112",
-            discussionNum:"A06"
+            "location":"WLH 2112",
+            "discussionNum":"A06"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"2000",
-                    end:"2100"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"2000",
+                    "end":"2100"
                   },
-            location:"WLH 2115",
-            discussionNum:"A07"
+            "location":"WLH 2115",
+            "discussionNum":"A07"
           },
           {
-            self:"DI",
-            time: {
-                    day:["Tu"],
-                    start:"1000",
-                    end:"1100"
+            "self":"DI",
+            "time": {
+                    "day":["Tu"],
+                    "start":"1000",
+                    "end":"1100"
                   },
-            location:"WLH 2115",
-            discussionNum:"A08"
+            "location":"WLH 2115",
+            "discussionNum":"A08"
           }
         ]
       }
@@ -112,146 +112,146 @@
 
   "CSE101":
   {
-    name:"Design and Analysis of Algorithms ", 
-    num:"101",
-    sub:"CSE", 
-    description:"Design and analysis of efficient algorithms with emphasis of non-numerical algorithms such as sorting, searching, pattern matching, and graph and network algorithms.\n Measuring complexity of algorithms, time and storage. NP-complete problems.\n",
-    sections:
+    "name":"Design and Analysis of Algorithms ", 
+    "num":"101",
+    "sub":"CSE", 
+    "description":"Design and analysis of efficient algorithms with emphasis of non-numerical algorithms such as sorting, searching, pattern matching, and graph and network algorithms.\n Measuring complexity of algorithms, time and storage. NP-complete problems.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1300",
-                end:"1400"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1300",
+                "end":"1400"
               },        
-        fin: {
-                day:"6/09/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
+        "fin": {
+                "day":"6/09/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
              },
-        units:"4",
-        prof:"Daniel Mertz Kane",
-        location:"LEDDN AUD",
-        discussions: 
+        "units":"4",
+        "prof":"Daniel Mertz Kane",
+        "location":"LEDDN AUD",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1400",
-                    end:"1500"
-                  }
-            location:"CSB 005",
-            discussionNum:"867324"
-          },
-          {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1600",
-                    end:"1700"
-                  }
-            location:"CSB 005",
-            discussionNum:"867326"
-          },
-          {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1700",
-                    end:"1800"
-                  }
-            location:"CSB 005",
-            discussionNum:"867327"
-          },
-          {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1200",
-                    end:"1300"
-                  }
-            location:"CSB 005",
-            discussionNum:"874470"
-          }
-        ]
-      },
-      {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1100",
-                end:"1200"
-              },
-        fin: {
-               day:"6/10/2016",
-               start:"11:30 am",
-               end:"2:30 am"
-             },
-        units:"4",
-        prof:"Miles E Jones",
-        location:"PCYNH 109",
-        discussions: 
-        [
-          {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1400",
-                    end:"1500"
-                  }
-            location:"CSB 001",
-            discussionNum:"867329"
-          },
-          {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1700",
-                    end:"1800"
-                  }
-            location:"PCYNH 122",
-            discussionNum:"867330"
-          }
-        ]
-      },
-      {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1200",
-                end:"1300"
-              },
-        fin: {
-                day:"6/08/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
-             },
-        units:"4",
-        prof:"Miles E Jones",
-        location:"CENTR 119",
-        discussions: 
-        [
-          {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1700",
-                    end:"1800"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1400",
+                    "end":"1500"
                   },
-            location:"CSB 001",
-            discussionNum:"867332"
+            "location":"CSB 005",
+            "discussionNum":"867324"
           },
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1600",
-                    end:"1700"
-                  }
-            location:"PCYNH 122",
-            discussionNum:"867333"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"867326"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"867327"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"874470"
+          }
+        ]
+      },
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1100",
+                "end":"1200"
+              },
+        "fin": {
+               "day":"6/10/2016",
+               "start":"11:30 am",
+               "end":"2:30 am"
+             },
+        "units":"4",
+        "prof":"Miles E Jones",
+        "location":"PCYNH 109",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1400",
+                    "end":"1500"
+                  },
+            "location":"CSB 001",
+            "discussionNum":"867329"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"PCYNH 122",
+            "discussionNum":"867330"
+          }
+        ]
+      },
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1200",
+                "end":"1300"
+              },
+        "fin": {
+                "day":"6/08/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
+             },
+        "units":"4",
+        "prof":"Miles E Jones",
+        "location":"CENTR 119",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"CSB 001",
+            "discussionNum":"867332"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"PCYNH 122",
+            "discussionNum":"867333"
           }
         ]          
       }
@@ -260,89 +260,89 @@
 
   "CSE105":
   {
-    name:"Intro/Theory of Computation", 
-    num:"105",
-    sub:"CSE", 
-    description:"An introduction to the mathematical theory of computability. Formal languages. Finite automata and regular expression.\n Push-down automata and context-free languages. Computable or recursive functions: Turing machines, the halting problem.\n Undecidability. Credit not offered for both Math 166 and CSE 105. Equivalent to Math 166. \nPrerequisites: CSE 12, CSE 21 or Math 15B, or Math 100A, or Math 103A. ",
-    sections:
+    "name":"Intro/Theory of Computation", 
+    "num":"105",
+    "sub":"CSE", 
+    "description":"An introduction to the mathematical theory of computability. Formal languages. Finite automata and regular expression.\n Push-down automata and context-free languages. Computable or recursive functions: Turing machines, the halting problem.\n Undecidability. Credit not offered for both Math 166 and CSE 105. Equivalent to Math 166. \nPrerequisites: CSE 12, CSE 21 or Math 15B, or Math 100A, or Math 103A. ",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1100",
-                end:"1230"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1100",
+                "end":"1230"
               },            
-        fin: {
-                day:"6/04/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
+        "fin": {
+                "day":"6/04/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
              },
-        sectNum:"867337",
-        units:"4",
-        prof:"Jeanne Ferrante",
-        location:"CENTR 101",
-        discussions:
+        "sectNum":"867337",
+        "units":"4",
+        "prof":"Jeanne Ferrante",
+        "location":"CENTR 101",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1100",
-                    end:"1200"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1100",
+                    "end":"1200"
                   },
-            location:"SOLIS 104",
-            discussionNum:"A01"
+            "location":"SOLIS 104",
+            "discussionNum":"A01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1300",
-                    end:"1400"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1300",
+                    "end":"1400"
                   },
-            location:"CENTR 105",
-            discussionNum:"A02"
+            "location":"CENTR 105",
+            "discussionNum":"A02"
           }
         ]
       },
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1100",
-                end:"1200"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1100",
+                "end":"1200"
               },        
-        fin: {
-                day:"6/04/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
+        "fin": {
+                "day":"6/04/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
              },
-        units:"4",
-        prof:"Mia Kemp Minnes",
-        location:"CENTR  101",
-        sectNum:"867339",
-        discussions: 
+        "units":"4",
+        "prof":"Mia Kemp Minnes",
+        "location":"CENTR  101",
+        "sectNum":"867339",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1500",
-                    end:"1600"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1500",
+                    "end":"1600"
                   },
-            location:"SOLIS 104",
-            discussionNum:"B01"
+            "location":"SOLIS 104",
+            "discussionNum":"B01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1600",
-                    end:"1700"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1600",
+                    "end":"1700"
                   },
-            location:"SOLIS 104",
-            discussionNum:"B02"
+            "location":"SOLIS 104",
+            "discussionNum":"B02"
           }
         ]
       }
@@ -351,159 +351,159 @@
  
   "CSE110":
   {
-    name:"Intro/Theory of Computation", 
-    num:"110",
-    sub:"CSE", 
-    description:"Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDE’s, version control, and test harnesses.\n CSE 70 is renumbered to CSE 110: students may not receive credit for both CSE 70 and CSE 110. Prerequisites: CSE 12, CSE 21, or Math 15B.\n",
-    sections:
+    "name":"Intro/Theory of Computation", 
+    "num":"110",
+    "sub":"CSE", 
+    "description":"Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDE’s, version control, and test harnesses.\n CSE 70 is renumbered to CSE 110: students may not receive credit for both CSE 70 and CSE 110. Prerequisites: CSE 12, CSE 21, or Math 15B.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1530",
-                end:"1700"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1530",
+                "end":"1700"
               },
-        fin: {
-                day:"6/06/2016",
-                start:"3:00 pm",
-                end:"5:59  pm"
+        "fin": {
+                "day":"6/06/2016",
+                "start":"3:00 pm",
+                "end":"5:59  pm"
              },
-        sectNum:"867341",
-        units:"4",
-        prof:"Gary N Gillespie",
-        location:"PETER 110",
-        discussions: 
+        "sectNum":"867341",
+        "units":"4",
+        "prof":"Gary N Gillespie",
+        "location":"PETER 110",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1300",
-                    end:"1400"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1300",
+                    "end":"1400"
                   },
-            location:"WLH 2207",
-            discussionNum:"A01"
+            "location":"WLH 2207",
+            "discussionNum":"A01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1800",
-                    end:"1900"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1800",
+                    "end":"1900"
                   },
-            location:"CSB 005",
-            discussionNum:"A02"
+            "location":"CSB 005",
+            "discussionNum":"A02"
           },
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1800",
-                    end:"1900"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1800",
+                    "end":"1900"
                   },
-            location:"CSB 005",
-            discussionNum:"A02"
+            "location":"CSB 005",
+            "discussionNum":"A02"
           }
         ],
-        labs: 
+        "labs": 
         [
           {
-            self:LA,
-            time: {
-                    days:["M"],
-                    start:"1000",
-                    end:"1300"
+            "self":"LA",
+            "time": {
+                    "days":["M"],
+                    "start":"1000",
+                    "end":"1300"
                   },
-            location:"EBU3B B240"
+            "location":"EBU3B B240"
           },
           {
-            self:"LA",
-            time: {
-                    days:["M"],
-                    start:"1000",
-                    end:"1300"
+            "self":"LA",
+            "time": {
+                    "days":["M"],
+                    "start":"1000",
+                    "end":"1300"
                   },
-            location:"EBU3B B250"
+            "location":"EBU3B B250"
           },
           {
-            self:"LA",
-            time: {
-                    days:["M"],
-                    start:"1000",
-                    end:"1300"
+            "self":"LA",
+            "time": {
+                    "days":["M"],
+                    "start":"1000",
+                    "end":"1300"
                   },
-            location:"EBU3B B260"
+            "location":"EBU3B B260"
           }
         ]
       },
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1300",
-                end:"1400"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1300",
+                "end":"1400"
               },
-        fin: {
-                day:"6/09/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
+        "fin": {
+                "day":"6/09/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
              },
-        units:"4",
-        prof:"William G Griswold",
-        location:"PETER  110",
-        sectNum:"867349",
-        discussions: 
+        "units":"4",
+        "prof":"William G Griswold",
+        "location":"PETER  110",
+        "sectNum":"867349",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1600",
-                    end:"1700"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1600",
+                    "end":"1700"
                   },
-            location:"CENTER 216",
-            discussionNum:"B01"
+            "location":"CENTER 216",
+            "discussionNum":"B01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1700",
-                    end:"1800",
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1700",
+                    "end":"1800"
                   },
-            location:"CENTER 216",
-            discussionNum:"B02"
+            "location":"CENTER 216",
+            "discussionNum":"B02"
           }
         ],
-        labs: 
+        "labs": 
         [
           {
-            self:"LA",
-            time: {
-                    days:["W"],
-                    start:"1000",
-                    end:"1300"
+            "self":"LA",
+            "time": {
+                    "days":["W"],
+                    "start":"1000",
+                    "end":"1300"
                   },
-            location:"EBU3B B240",
+            "location":"EBU3B B240"
           },
           {
-            self:"LA",
-            time: {
-                    days:["W"],
-                    start:"1000",
-                    end:"1300",
+            "self":"LA",
+            "time": {
+                    "days":["W"],
+                    "start":"1000",
+                    "end":"1300"
                   },
-            location:"EBU3B B250"
+            "location":"EBU3B B250"
           },
           {
-            self:"LA",
-            time: {
-                    days:["W"],
-                    start:"1000",
-                    end:"1300"
-                  }
-            location:"EBU3B B260"
+            "self":"LA",
+            "time": {
+                    "days":["W"],
+                    "start":"1000",
+                    "end":"1300"
+                  },
+            "location":"EBU3B B260"
           }
         ]
       }
@@ -512,39 +512,39 @@
   
   "CSE120":
   {
-    name:"Princ/Computer Operating Systm", 
-    num:"120",
-    sub:"CSE", 
-    description:"Basic functions of operating systems; basic kernel structure, concurrency, memory management, virtual memory, file systems, process scheduling, security and protection.\n Prerequisites: CSE 30, and CSE 101 or Math 188, and CSE 70 or CSE 110.\n",
-    sections:
+    "name":"Princ/Computer Operating Systm", 
+    "num":"120",
+    "sub":"CSE", 
+    "description":"Basic functions of operating systems; basic kernel structure, concurrency, memory management, virtual memory, file systems, process scheduling, security and protection.\n Prerequisites: CSE 30, and CSE 101 or Math 188, and CSE 70 or CSE 110.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1700",
-                end:"1830"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1700",
+                "end":"1830"
               },
-        fin: {
-                day:"6/09/2016",
-                start:"7:00 pm",
-                end:"10:00 pm"
+        "fin": {
+                "day":"6/09/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
              },
-        sectNum:"867355",
-        units:"4",
-        prof:"Gregory M Kesden",
-        location:"PCYNH 109",
-        discussions: 
+        "sectNum":"867355",
+        "units":"4",
+        "prof":"Gregory M Kesden",
+        "location":"PCYNH 109",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"2000",
-                    end:"2100"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"2000",
+                    "end":"2100"
                   },
-            location:"PCYNH 109",
-            discussionNum:"A01"
+            "location":"PCYNH 109",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -553,39 +553,39 @@
   
   "CSE123":
   {
-    name:"Computer Networks", 
-    num:"123",
-    sub:"CSE", 
-    description:"(Renumbered from CSE 123A.) Introduction to concepts, principles, and practice of computer communication networks with examples from existing architectures, protocols, and standards with special emphasis on the Internet protocols. Layering and the OSI model; physical and data link layers;\n local and wide area networks; datagrams and virtual circuits; routing and congestion control; internetworking. Transport protocols.\n Credit may not be received for both CSE 123 and ECE 158A, or CSE 123A and CSE 123. Prerequisites: CSE 120 or consent of instructor. Majors only.",
-    sections:
+    "name":"Computer Networks", 
+    "num":"123",
+    "sub":"CSE", 
+    "description":"(Renumbered from CSE 123A.) Introduction to concepts, principles, and practice of computer communication networks with examples from existing architectures, protocols, and standards with special emphasis on the Internet protocols. Layering and the OSI model; physical and data link layers;\n local and wide area networks; datagrams and virtual circuits; routing and congestion control; internetworking. Transport protocols.\n Credit may not be received for both CSE 123 and ECE 158A, or CSE 123A and CSE 123. Prerequisites: CSE 120 or consent of instructor. Majors only.",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1000",
-                end:"1100"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1000",
+                "end":"1100"
               },        
-        fin: {
-                day:"6/06/2016",
-                start:"8:00 am",
-                end:"11:00 am"
+        "fin": {
+                "day":"6/06/2016",
+                "start":"8:00 am",
+                "end":"11:00 am"
              },
-        sectNum:"867358",
-        units:"4",
-        prof:"Alex C. Snoeren",
-        location:"CENTR 113",
-        discussions: 
+        "sectNum":"867358",
+        "units":"4",
+        "prof":"Alex C. Snoeren",
+        "location":"CENTR 113",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1500",
-                    end:"1600"
-                  }
-            location:"CENTR 214",
-            discussionNum:"A01"
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1500",
+                    "end":"1600"
+                  },
+            "location":"CENTR 214",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -594,39 +594,39 @@
    
   "CSE127":
   {
-    name:"Intro to Computer Security", 
-    num:"127",
-    sub:"CSE", 
-    description:"Topics include basic cryptography, security/threat analysis, access control, auditing, security models, distributed systems security, and theory behind common attack and defense techniques.\n The class will go over formal models as well as the bits and bytes of security exploits. Prerequisites: CSE 21 or Math 15B, and CSE 120.\n",
-    sections:
+    "name":"Intro to Computer Security", 
+    "num":"127",
+    "sub":"CSE", 
+    "description":"Topics include basic cryptography, security/threat analysis, access control, auditing, security models, distributed systems security, and theory behind common attack and defense techniques.\n The class will go over formal models as well as the bits and bytes of security exploits. Prerequisites: CSE 21 or Math 15B, and CSE 120.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W"],
-                start:"1830",
-                end:"2000"
+        "self":"LE",
+        "time": {
+                "days":["M","W"],
+                "start":"1830",
+                "end":"2000"
               },
-        fin: {
-                day:"6/08/2016",
-                start:"7:00 pm",
-                end:"10:00 pm"
+        "fin": {
+                "day":"6/08/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
              },
-        sectNum:"867361",
-        units:"4",
-        prof:"Hovav Shacham",
-        location:"CENTR 216",
-        discussions:
+        "sectNum":"867361",
+        "units":"4",
+        "prof":"Hovav Shacham",
+        "location":"CENTR 216",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1400",
-                    end:"1500"
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1400",
+                    "end":"1500"
                   },
-            location:"CENTR 113",
-            discussionNum:"A01",
+            "location":"CENTR 113",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -635,39 +635,39 @@
   
   "CSE130":
   {
-    name:"Programing Lang:Princpl&Paradigm", 
-    num:"130",
-    sub:"CSE", 
-    description:"(Formerly CSE 173.) Introduction to programming languages and paradigms, the components that comprise them, and the principles of language design, all through the analysis and comparison of a variety of languages (e.g., Pascal, Ada, C++, PROLOG, ML.)\n Will involve programming in most languages studied.\n Prerequisites: CSE 12, and CSE 100 or Math 176, CSE 105 or Math 166.",
-    sections:
+    "name":"Programing Lang:Princpl&Paradigm", 
+    "num":"130",
+    "sub":"CSE", 
+    "description":"(Formerly CSE 173.) Introduction to programming languages and paradigms, the components that comprise them, and the principles of language design, all through the analysis and comparison of a variety of languages (e.g., Pascal, Ada, C++, PROLOG, ML.)\n Will involve programming in most languages studied.\n Prerequisites: CSE 12, and CSE 100 or Math 176, CSE 105 or Math 166.",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1300",
-                end:"1400"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1300",
+                "end":"1400"
               },        
-        fin: {
-                day:"6/09/2016",
-                start:"11:30 am",
-                end:"2:30 pm"
+        "fin": {
+                "day":"6/09/2016",
+                "start":"11:30 am",
+                "end":"2:30 pm"
              },
-        sectNum:"867364",
-        units:"4",
-        prof:"Ranjit Jhala",
-        location:"PCYNH 106",
-        discussions: 
+        "sectNum":"867364",
+        "units":"4",
+        "prof":"Ranjit Jhala",
+        "location":"PCYNH 106",
+        "discussions": 
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1600",
-                    end:"1700"
-                  }
-            location:"PCYNH 109",
-            discussionNum:"A01",
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"PCYNH 109",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -676,49 +676,49 @@
   
   "CSE131":
   {
-    name:"Compiler Construction", 
-    num:"131",
-    sub:"CSE", 
-    description:"(Formerly CSE 131B.) Introduction to the compilation of programming languages, practice of lexical and syntactic analysis, symbol tables, syntax-directed translation, type checking, code generation, optimization, interpretation, and compiler structure.\n (Students may receive repeat credit for CSE 131A and CSE 131B by completing CSE 131.) Prerequisites: CSE 100 or Math 176, CSE 105 or Math 166, CSE 70 or CSE 110, and CSE 130.\n",
-    sections:
+    "name":"Compiler Construction", 
+    "num":"131",
+    "sub":"CSE", 
+    "description":"(Formerly CSE 131B.) Introduction to the compilation of programming languages, practice of lexical and syntactic analysis, symbol tables, syntax-directed translation, type checking, code generation, optimization, interpretation, and compiler structure.\n (Students may receive repeat credit for CSE 131A and CSE 131B by completing CSE 131.) Prerequisites: CSE 100 or Math 176, CSE 105 or Math 166, CSE 70 or CSE 110, and CSE 130.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W"],
-                start:"1830",
-                end:"2000"
-              },        
-        fin: {
-                day:"6/08/2016",
-                start:"7:00 pm",
-                end:"10:00  pm"
-             }
-        sectNum:"867366",
-        units:"4",
-        prof:"Weifeng Zhang",
-        location:"SOLIS 107",
-        discussions:
+        "self":"LE",
+        "time": {
+                  "days":["M","W"],
+                  "start":"1830",
+                  "end":"2000"
+                 },        
+        "fin": {
+                "day":"6/08/2016",
+                "start":"7:00 pm",
+                "end":"10:00  pm"
+               },
+        "sectNum":"867366",
+        "units":"4",
+        "prof":"Weifeng Zhang",
+        "location":"SOLIS 107",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1700",
-                    end:"1800"
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1700",
+                    "end":"1800"
                   },
-            location:"CENTR 101",
-            discussionNum:"A01",
+            "location":"CENTR 101",
+            "discussionNum":"A01"
           },
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1800",
-                    end:"1900"
-                  }
-            location:"CENTR 101",
-            discussionNum:"A01",
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1800",
+                    "end":"1900"
+                  },
+            "location":"CENTR 101",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -727,39 +727,39 @@
   
   "CSE135":
   {
-    name:"Server-side Web Applications", 
-    num:"135",
-    sub:"CSE", 
-    description:"Design and implementation of dynamic web-based applications. Multitier architecture, scripting languages, SQL, XML, session handling, nonbrowser clients, web services, and scalability, security, and usability in the web context.\n Credit is not offered for both CSE 135 and CSE 134A. Prerequisites: CSE 100 or Math 176.\n",
-    sections:
+    "name":"Server-side Web Applications", 
+    "num":"135",
+    "sub":"CSE", 
+    "description":"Design and implementation of dynamic web-based applications. Multitier architecture, scripting languages, SQL, XML, session handling, nonbrowser clients, web services, and scalability, security, and usability in the web context.\n Credit is not offered for both CSE 135 and CSE 134A. Prerequisites: CSE 100 or Math 176.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1830",
-                end:"2000"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1830",
+                "end":"2000"
               },
-        fin: {
-                day:"6/07/2016",
-                start:"7:00 pm",
-                end:"10:00 pm"
+        "fin": {
+                "day":"6/07/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
              },
-        sectNum:"867375",
-        units:"4",
-        prof:"Yannis Papakonstantinou",
-        location:"CENTR 115",
-        discussions:
+        "sectNum":"867375",
+        "units":"4",
+        "prof":"Yannis Papakonstantinou",
+        "location":"CENTR 115",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1200",
-                    end:"1300"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1200",
+                    "end":"1300"
                   },
-            location:"PCYNH 106",
-            discussionNum:"A01"
+            "location":"PCYNH 106",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -768,39 +768,39 @@
 
   "CSE136":
   {
-    name:"Enterprise-class Web Applications", 
-    num:"136",
-    sub:"CSE", 
-    description:"Design and implementation of dynamic web-based applications. Multitier architecture, scripting languages, SQL, XML, session handling, nonbrowser clients, web services, and scalability, security, and usability in the web context.\n Credit is not offered for both CSE 135 and CSE 134A. Prerequisites: CSE 100 or Math 176.\n",
-    sections:
+    "name":"Enterprise-class Web Applications", 
+    "num":"136",
+    "sub":"CSE", 
+    "description":"Design and implementation of dynamic web-based applications. Multitier architecture, scripting languages, SQL, XML, session handling, nonbrowser clients, web services, and scalability, security, and usability in the web context.\n Credit is not offered for both CSE 135 and CSE 134A. Prerequisites: CSE 100 or Math 176.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"0800",
-                end:"0920"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"0800",
+                "end":"0920"
               },
-        fin: {
-                day:"6/09/2016",
-                start:"8:00 am",
-                end:"11:00 am"
+        "fin": {
+                "day":"6/09/2016",
+                "start":"8:00 am",
+                "end":"11:00 am"
              },
-        sectNum:"867377",
-        units:"4",
-        prof:"Thomas Allan Powell",
-        location:"CENTR 212",
-        discussions:
+        "sectNum":"867377",
+        "units":"4",
+        "prof":"Thomas Allan Powell",
+        "location":"CENTR 212",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1700",
-                    end:"1800"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1700",
+                    "end":"1800"
                   },
-            location:"CENTR 216",
-            discussionNum:"A01",
+            "location":"CENTR 216",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -809,48 +809,48 @@
   
   "CSE148":
   {
-    name:"Adv Processor Arch Design Proj", 
-    num:"148",
-    sub:"CSE", 
-    description:"Students will use hardware description language tools to add advanced architectural features to a basic processor design.\n These features may include pipelining, superscalar execution, branch prediction, and advanced cache features. Designs will be implemented in programmable logic devices. Prerequisites: CSE 141, CSE 141L, or consent of instructor.\n",
-    sections:
+    "name":"Adv Processor Arch Design Proj", 
+    "num":"148",
+    "sub":"CSE", 
+    "description":"Students will use hardware description language tools to add advanced architectural features to a basic processor design.\n These features may include pipelining, superscalar execution, branch prediction, and advanced cache features. Designs will be implemented in programmable logic devices. Prerequisites: CSE 141, CSE 141L, or consent of instructor.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W","F"],
-                start:"1400",
-                end:"1500"
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1400",
+                "end":"1500"
               },        
-        fin: {
-                day:"6/10/2016",
-                start:"3:00 pm",
-                end:"6:00 pm"
+        "fin": {
+                "day":"6/10/2016",
+                "start":"3:00 pm",
+                "end":"6:00 pm"
              },
-        units:"4",
-        prof:"Dean Michael Tullsen",
-        location:"WLH 2206",
-        discussions:
+        "units":"4",
+        "prof":"Dean Michael Tullsen",
+        "location":"WLH 2206",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["M"],
-                    start:"1500",
-                    end:"1600"
+            "self":"DI",
+            "time": {
+                    "day":["M"],
+                    "start":"1500",
+                    "end":"1600"
                   },
-            location:"WLH 2206",
-            discussionNum:"867399",
+            "location":"WLH 2206",
+            "discussionNum":"867399"
           },
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1500",
-                    end:"1600"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1500",
+                    "end":"1600"
                   },
-            location:"WLH 2206",
-            discussionNum:"867400",
+            "location":"WLH 2206",
+            "discussionNum":"867400"
           }
         ]
       }
@@ -859,38 +859,38 @@
 
   "CSE152":
   {
-    name:"Intro to Computer Vision", 
-    num:"152",
-    sub:"CSE", 
-    description:"The goal of computer vision is to compute scene and object properties from images and video.\n This introductory course includes feature detection, image segmentation, motion estimation, object recognition, and 3-D shape reconstruction through stereo, photometric stereo, and structure from motion. Prerequisites: Math 20F, CSE 100 or Math 176, CSE 101 or Math 188.\n",
-    sections:
+    "name":"Intro to Computer Vision", 
+    "num":"152",
+    "sub":"CSE", 
+    "description":"The goal of computer vision is to compute scene and object properties from images and video.\n This introductory course includes feature detection, image segmentation, motion estimation, object recognition, and 3-D shape reconstruction through stereo, photometric stereo, and structure from motion. Prerequisites: Math 20F, CSE 100 or Math 176, CSE 101 or Math 188.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W"],
-                start:"1700",
-                end:"1830"
+        "self":"LE",
+        "time": {
+                "days":["M","W"],
+                "start":"1700",
+                "end":"1830"
               },        
-        fin: {
-                day:"6/10/2016",
-                start:"7:00 pm",
-                end:"10:00 pm"
+        "fin": {
+                "day":"6/10/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
              },
-        units:"4",
-        prof:"Benjamin Lawrence Ochoa",
-        location:"PETER 102",
-        discussions:
+        "units":"4",
+        "prof":"Benjamin Lawrence Ochoa",
+        "location":"PETER 102",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1500",
-                    end:"1600"
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1500",
+                    "end":"1600"
                   },
-            location:"MANDE B-150",
-            discussionNum:"867408"
+            "location":"MANDE B-150",
+            "discussionNum":"867408"
           }
         ]
       }
@@ -899,38 +899,38 @@
    
   "CSE167":
   {
-    name:"Computer Graphics", 
-    num:"167",
-    sub:"CSE", 
-    description:"Representation and manipulation of pictorial data. Two-dimensional and three-dimensional transformations, curves, surfaces. Projection, illumination, and shading models.\n Raster and vector graphic I/O devices; retained-mode and immediate-mode graphics software systems and applications. Students may not receive credit for both Math 155A and CSE 167. Prerequisites: CSE 100 or Math 176.\n",
-    sections:
+    "name":"Computer Graphics", 
+    "num":"167",
+    "sub":"CSE", 
+    "description":"Representation and manipulation of pictorial data. Two-dimensional and three-dimensional transformations, curves, surfaces. Projection, illumination, and shading models.\n Raster and vector graphic I/O devices; retained-mode and immediate-mode graphics software systems and applications. Students may not receive credit for both Math 155A and CSE 167. Prerequisites: CSE 100 or Math 176.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1400",
-                end:"1530"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1400",
+                "end":"1530"
               },        
-        fin: {
-                day:"6/07/2016",
-                start:"3:00 pm",
-                end:"6:00 pm"
+        "fin": {
+                "day":"6/07/2016",
+                "start":"3:00 pm",
+                "end":"6:00 pm"
              },
-        sectNum:"867409",
-        units:"4",
-        prof:"Jurgen P Schulze",
-        location:"PCYNH 122",
-        labs:
+        "sectNum":"867409",
+        "units":"4",
+        "prof":"Jurgen P Schulze",
+        "location":"PCYNH 122",
+        "labs":
         [
           {
-            self:"LA",
-            time: {
-                    days:["M"],
-                    start:"1600",
-                    end:"1700"
-                  }
-            location:"PCYNH 122"
+            "self":"LA",
+            "time": {
+                    "days":["M"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"PCYNH 122"
           }
         ]
       }
@@ -939,38 +939,38 @@
   
   "CSE168":
   {
-    name:"Computer Graphics II:Rendering", 
-    num:"168",
-    sub:"CSE", 
-    description:"Weekly programming assignments that will cover graphics rendering algorithms.\n During the course the students will learn about ray tracing, geometry, tessellation, acceleration structures, sampling, filtering, shading models, and advanced topics such as global illumination and programmable graphics hardware. Prerequisites: CSE 167.\n",
-    sections:
+    "name":"Computer Graphics II:Rendering", 
+    "num":"168",
+    "sub":"CSE", 
+    "description":"Weekly programming assignments that will cover graphics rendering algorithms.\n During the course the students will learn about ray tracing, geometry, tessellation, acceleration structures, sampling, filtering, shading models, and advanced topics such as global illumination and programmable graphics hardware. Prerequisites: CSE 167.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1400",
-                end:"1530"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1400",
+                "end":"1530"
               },        
-        fin: {
-                day:"6/07/2016",
-                start:"3:00 pm",
-                end:"6:00 pm"
+        "fin": {
+                "day":"6/07/2016",
+                "start":"3:00 pm",
+                "end":"6:00 pm"
              },
-        units:"4",
-        prof:"Henrik Jensen",
-        location:"CENTR 214",
-        discussions:
+        "units":"4",
+        "prof":"Henrik Jensen",
+        "location":"CENTR 214",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["W"],
-                    start:"1700",
-                    end:"1800",
+            "self":"DI",
+            "time": {
+                    "day":["W"],
+                    "start":"1700",
+                    "end":"1800"
                   },
-            location:"CENTR 113",
-            discussionNum:"867412",
+            "location":"CENTR 113",
+            "discussionNum":"867412"
           }
         ]
       }
@@ -979,38 +979,38 @@
 
   "CSE169":
   {
-    name:"Computer Animation", 
-    num:"169",
-    sub:"CSE", 
-    description:"Advanced graphics focusing on the programming techniques involved in computer animation. Algorithms and approaches for both character animation and physically based animation.\n Particular subjects may include skeletons, skinning, key framing, facial animation, inverse kinematics, locomotion, motion capture, video game animation, particle systems, rigid bodies, clothing, and hair. Recommended preparation: An understanding of linear algebra.\n",
-    sections:
+    "name":"Computer Animation", 
+    "num":"169",
+    "sub":"CSE", 
+    "description":"Advanced graphics focusing on the programming techniques involved in computer animation. Algorithms and approaches for both character animation and physically based animation.\n Particular subjects may include skeletons, skinning, key framing, facial animation, inverse kinematics, locomotion, motion capture, video game animation, particle systems, rigid bodies, clothing, and hair. Recommended preparation: An understanding of linear algebra.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["M","W"],
-                start:"1700",
-                end:"1830"
+        "self":"LE",
+        "time": {
+                "days":["M","W"],
+                "start":"1700",
+                "end":"1830"
               },        
-        fin: {
-                day:"6/10/2016",
-                start:"7:00 pm",
-                end:"10:00 pm"
+        "fin": {
+                "day":"6/10/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
              },
-        units:"4",
-        prof:"Staff",
-        location:"PCYNH 121",
-        discussions:
+        "units":"4",
+        "prof":"Staff",
+        "location":"PCYNH 121",
+        "discussions":
         [
           {
-            self:"DI",
-            time: {
-                    day:["F"],
-                    start:"1100",
-                    end:"1200"
+            "self":"DI",
+            "time": {
+                    "day":["F"],
+                    "start":"1100",
+                    "end":"1200"
                   },
-            location:"CSB 004",
-            discussionNum:"A01"
+            "location":"CSB 004",
+            "discussionNum":"A01"
           }
         ]
       }
@@ -1019,48 +1019,48 @@
 
   "COGS121":
   {
-    name:"Human Computer Interaction:Prog Studio", 
-    num:"121",
-    sub:"COGS", 
-    description:"This course covers fundamentals of user interface design and implementation of web-based systems.\n A major component is completion of a substantial programming project in which students work together in small teams. Prerequisites: Cognitive Science 120 and CSE 8B or CSE 11.\n",
-    sections:
+    "name":"Human Computer Interaction:Prog Studio", 
+    "num":"121",
+    "sub":"COGS", 
+    "description":"This course covers fundamentals of user interface design and implementation of web-based systems.\n A major component is completion of a substantial programming project in which students work together in small teams. Prerequisites: Cognitive Science 120 and CSE 8B or CSE 11.\n",
+    "sections":
     [
       {
-        self:"LE",
-        time: {
-                days:["Tu","Th"],
-                start:"1400",
-                end:"1530"
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1400",
+                "end":"1530"
               },        
-        fin: {
-                day:"6/07/2016",
-                start:"3:00 pm",
-                end:"6:00 pm"
+        "fin": {
+                "day":"6/07/2016",
+                "start":"3:00 pm",
+                "end":"6:00 pm"
              },
-        units:"4",
-        prof:"Nadir Weibel",
-        location:"HSS 1330",
-        discussions: 
+        "units":"4",
+        "prof":"Nadir Weibel",
+        "location":"HSS 1330",
+        "discussions": 
         [
           {
-            self:"ST",
-            time: {
-                    day:["F"],
-                    start:"1400",
-                    end:"1500"
+            "self":"ST",
+            "time": {
+                    "day":["F"],
+                    "start":"1400",
+                    "end":"1500"
                   },
-            location:"HSS 1346",
-            discussionNum:"868995",
+            "location":"HSS 1346",
+            "discussionNum":"868995"
           },
           {
-            self:"ST",
-            time: {
-                    day:["F"],
-                    start:"1300",
-                    end:"1400"
+            "self":"ST",
+            "time": {
+                    "day":["F"],
+                    "start":"1300",
+                    "end":"1400"
                   },
-            location:"HSS 1346",
-            discussionNum:"868996"
+            "location":"HSS 1346",
+            "discussionNum":"868996"
           }
         ]
       }
