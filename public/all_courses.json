@@ -2,7 +2,7 @@
 {
 name:"Advance Data Structures", 
 num:"100",
-sub:"CSE", 
+sub:"CSE",
 description:"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables.\n","Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized\n","Uses C++ and STL. Credit not offered for both Math 176 and CSE 100. Equivalent to Math 176. Recommended preparation: background in C or C++ programming.\n","Prerequisites: CSE 12, CSE 15L, CSE 21 or Math 15B, and CSE 5A or CSE 30 or ECE 15 or MAE 9.\n",
 sections:[{
         self:"LE",
