@@ -35,10 +35,10 @@ function initializePage(){
 	var courseList = [];
 
 	$.get(courseURL, function(course){
-		let subjectList = course.all_subjects;
-		for( let s of subjectList )
+		
+		for( let s in course )
 		{
-			courseList.push(s['name']);
+			courseList.push(s);
 		}
 		//console.log(courseList);
 		awesomplete.list = courseList;
