@@ -1,5 +1,7 @@
 'use strict';
 
+let text;
+
 $(document).ready(function(){
 	initializePage();
 	/*
@@ -16,7 +18,7 @@ $(document).ready(function(){
 	*/
 
 	$('button[href="#search"]').on('click', function(event) {
-		let text = $("input#search-complete").val();
+		text = $("input#search-complete").val();
 		console.log(text);
 	});	
 
