@@ -18,6 +18,29 @@ var classes = []; // classes
 
 $(document).ready(function() {
 	initializePage();
+
+	$('button[href="#search"]').on('click', function(event) {
+		let text = $("input#search-complete").val();
+		console.log(text); // "CSE 100"
+		text = text.replace(/\s/g, '');
+
+		let subjectCourse;
+		$.get(courseURL, function(course){
+			subjectCourse = course[text];
+		});
+		classes.push(subjectCourse);
+		var start = Date.now();
+		s = generateSchedules([arrange1, arrange2, arrange3]);
+		var runtime = Date.now() - start;
+		/*
+		console.log(s);
+		console.log(runtime);
+		*/
+		for(var i in s) {	
+			console.log('calendaring');
+			createCalendar(s[i], i);
+		}
+	});	
 });
 
 function initializePage() {
