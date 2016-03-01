@@ -25,13 +25,11 @@
 
 <body>
 	{{> navbar}}
-	
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Create Schedule</h1>
 			<p>Hopefully one of these is useful</p>
 		</div>
-
 		<div class="row create-buttons">
 			<div class="col-xs-offset-1">Search for courses: 
 				<span><input id="search-complete" placeholder="ex: CSE120" /></span>
@@ -39,32 +37,6 @@
 			</div>
 		</div>
 		<br>
-		<!--
-		<div class="schedule">
-			<div class="row schedule-header no-gutter">
-				<div class="col-xs-1 schedule-day">.</div>
-				<div class="col-xs-2 schedule-day">Mon<text class="hidden-xs">day</text></div>
-				<div class="col-xs-2 schedule-day">Tues<text class="hidden-xs">day</text></div>
-				<div class="col-xs-2 schedule-day">Wed<text class="hidden-xs">nesday</text></div>
-				<div class="col-xs-2 schedule-day">Thur<text class="hidden-xs">sday</text></div>
-				<div class="col-xs-2 schedule-day right-end">Fri<text class="hidden-xs">day</text></div>
-			</div>
-
-			<div class="schedule-timeblocks">
-				<div class="row no-gutter side-cols"><div class="col-xs-1">
-					<div class="schedule-timetext">9</div>
-				</div></div>
-				<div class="row no-gutter side-cols"><div class="col-xs-1">
-					<div class="schedule-timetext">10</div>
-				</div></div>
-				<div class="row no-gutter side-cols"><div class="col-xs-1">
-					<div class="schedule-timetext">11</div>
-				</div></div>
-				<div class="row no-gutter side-cols"><div class="col-xs-1 last-block">
-				</div></div>
-			</div>
-		</div>
-		-->
 		<div class="daily">
 			<ul class="nav nav-pills nav-justified nav-color">
 				<li class="active daily-day"><a data-toggle="pill" href="#monday">M</a></li>
@@ -75,31 +47,6 @@
 			</ul>
 			<hr class="low-margin"/>
 			<div class="daily-timecells">
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>08:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>08:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>09:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>09:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>10:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>10:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>11:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>11:30a</text>
-				</div></div>
-
 				<!--WHERE THE CALEDAR GENERATION GOES-->
 				<div class="tab-content">
 					<div id="monday" class="tab-pane fade in active">
@@ -142,7 +89,6 @@
 		</div>
 
 	</div>
-
 	<!-- Search Form -->
 	<!-- 
 	<div id="search"> 
@@ -156,9 +102,9 @@
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/create2.js"></script>
 	<!-- awesomplete from web search -->
-	<script src="../js/awesomplete.js" async></script>
-	<script src="../js/search.js" async></script>
+	<script src="../js/awesomplete.js"></script>
+	<script src="../js/search.js"></script>
+	<script src="../js/create2.js"></script>
 </body>
 </html>

@@ -15,42 +15,64 @@ delete
 
 var s = []; // schedules
 var classes = []; // classes
+var courseURL = "/search/courses";
+var courseList = {};
 
 $(document).ready(function() {
 	initializePage();
 
 	$('button[href="#search"]').on('click', function(event) {
-		let text = $("input#search-complete").val();
-		console.log(text); // "CSE 100"
+		let text = $("input#search-complete").val();// "CSE 100"
 		text = text.replace(/\s/g, '');
+		for(var c of classes) {
+			if((c.sub + c.num) === text) {
+				console.log(text + ' has already been added');
+				return;
+			}
+		}
 
-		let subjectCourse;
-		$.get(courseURL, function(course){
-			subjectCourse = course[text];
-		});
-		classes.push(subjectCourse);
+		let subjectCourse = courseList[text];
+		classes.push(new Class(subjectCourse));
+
 		var start = Date.now();
-		s = generateSchedules([arrange1, arrange2, arrange3]);
+		var arrangeList = [];
+		for(var c of classes) {
+			arrangeList.push(c.arrangements());
+		}
+		console.log(arrangeList);
+		s = generateSchedules(arrangeList);
 		var runtime = Date.now() - start;
 		/*
 		console.log(s);
 		console.log(runtime);
 		*/
-		for(var i in s) {	
-			console.log('calendaring');
-			createCalendar(s[i], i);
+		if(s.length == 0) {
+			// WARNING POPUP
+			// NO SCHEDULES GENERATED
 		}
+		/*for(var i in s) {	
+			console.log('button calendaring');
+			randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
+			createCalendar(s[i], i);
+		}*/
+		console.log('button calendaring');
+		randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
+		createCalendar(s[0], 0);
 	});	
 });
 
-function initializePage() {
-	createCalendarTable(800, 2000); // start end
+var initializePage = function() {
+	$.get(courseURL, function(course){
+		courseList = course;
+	});
+
+	createCalendarTable(800, 2200); // start end
 	
 	/* TEST DATA */
 	var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'101'});
-	var t1 = new Time({'days':['M', 'Tu', 'W', 'Th', 'F'], 'start':800, 'end':900});
+	var t1 = new Time({'days':['M', 'Tu', 'W', 'Th', 'F'], 'start':1600, 'end':1700});
 	var sect1 = new Section({'time':t1});
-	var t1_d1 = new Time({'days':['F'], 'start':930, 'end':1030});
+	var t1_d1 = new Time({'days':['F'], 'start':1430, 'end':1530});
 	var disc1 = new Discussion({'time':t1_d1});
 	class1.addSection(sect1);
 	sect1.addDiscussion(disc1);
@@ -85,9 +107,10 @@ function initializePage() {
 	*/
 	for(var i in s) {	
 		console.log('calendaring');
+		randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
 		createCalendar(s[i], i);
 	}
-}
+};
 
 /*
 	==== Class =========================
@@ -96,7 +119,13 @@ var Class = function(data) {
 	this.name = data.name;
 	this.num = data.num;
 	this.sub = data.sub;
+	this.descrip = data.descript;
 	this.sections = []; // list of Sections
+	if(data.sections) {
+		for(s of data.sections) {
+			this.sections.push(new Section(s));
+		}
+	}
 };
 
 Class.prototype.addSection = function(section) {
@@ -136,8 +165,8 @@ var Section = function(data) {
 	this.sectNum = data.sectNum;
 	this.prof = data.prof;
 	this.location = data.location; // location
-	this.discussions = []; // list of Discussions
-	this.labs = []; // list of Labs
+	this.discussions = data.discussions || new Array(); // list of Discussions
+	this.labs = data.labs || new Array(); // list of Labs
 };
 
 Section.prototype.addDiscussion = function(discussion) {
@@ -174,7 +203,7 @@ var Location = function(data) {
 	==== Time ==========================
 */
 var Time = function(data) {
-	this.days = data.days || []; // list of strings, eg ["Tu", "Th"]
+	this.days = data.days || new Array(); // list of strings, eg ["Tu", "Th"]
 	this.start = data.start; // start time, eg 800 for 8:00am
 	this.end = data.end; // end time, eg 1300 for 1:00pm
 };
@@ -345,10 +374,7 @@ function createCalendarTable(start, end) { // only generate on the hour
 	}
 }
 
-function randColor() {
-	
-}
-randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5'];
+function randColor() { }
 randColor.pick = function() {
 	if(randColor.colors.length == 0) {
 		console.log("No colors left!!!");
@@ -365,7 +391,8 @@ randColor.pick = function() {
 
 function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 	for(var aClass of s.arrangement) {
-		var color = randColor.pick(); 
+		var color = randColor.pick();
+		console.log(color);
 		for(var part in aClass) { // part is section, discussion, or lab
 			if(!aClass[part].time) continue; // so so shoddy
 			

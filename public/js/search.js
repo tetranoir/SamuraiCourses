@@ -3,7 +3,7 @@
 let text;
 
 $(document).ready(function(){
-	initializePage();
+	initializeSearch();
 	/*
 	$('button[href="#search"]').on('click', function(event) {                    
 		$('#search').addClass('open');
@@ -17,14 +17,14 @@ $(document).ready(function(){
 	});	
 	*/
 
-	$('button[href="#search"]').on('click', function(event) {
+	$('button[href="#search"]').click(function() {
 		text = $("input#search-complete").val();
-		console.log(text);
+		console.log("searched:" + text);
 	});	
 
 });
 
-function initializePage(){
+function initializeSearch(){
 	
 	var input = document.getElementById("search-complete");
 	var awesomplete = new Awesomplete(input, {

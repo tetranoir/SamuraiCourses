@@ -36,6 +36,7 @@
 			<button type="button" href="#search" class="col-xs-offset-8 btn btn-default">add class</button>
 		</div>
 		<br>
+		<!-- MAYBE ADD LATER
 		<div class="schedule">
 			<div class="row schedule-header no-gutter">
 				<div class="col-xs-1 schedule-day">.</div>
@@ -60,6 +61,7 @@
 				</div></div>
 			</div>
 		</div>
+		-->
 
 		<div class="daily">
 			<ul class="nav nav-pills nav-justified nav-color">
@@ -71,31 +73,6 @@
 			</ul>
 			<hr class="low-margin"/>
 			<div class="daily-timecells">
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>08:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>08:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>09:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>09:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>10:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>10:30a</text>
-				</div></div>
-				<div class="row half-hour-cell-a"><div class="col-xs-4">
-					<text>11:00a</text>
-				</div></div>
-				<div class="row half-hour-cell-b"><div class="col-xs-4">
-					<text>11:30a</text>
-				</div></div>
-
 				<!--WHERE THE CALEDAR GENERATION GOES-->
 				<div class="tab-content">
 					<div id="monday" class="tab-pane fade in active">
@@ -144,16 +121,14 @@
 		<span class="close">X</span>
 		<form role="search" id="searchform" action="/search" method="get">
 			<input id="search-complete" value="" name="q" type="search" placeholder="ex: CSE 120"/>
-			
 		</form>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/awesomplete.js" async></script>
 	<script src="../js/search2.js"></script>
 	<script src="../js/create2.js"></script>
 	<!-- awesomplete from web search -->
-	<script src="../js/awesomplete.js" async></script>
-	<script src="../js/awesomplete.min.js" async></script>
 </body>
 </html>
