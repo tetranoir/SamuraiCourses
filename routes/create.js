@@ -1,4 +1,4 @@
-var courses = require('../public/all_courses.json');
+//var courses = require('../public/all_courses.json');
 
 exports.view = function(req, res){
 	res.render('create');
