@@ -143,10 +143,13 @@
 	padding-top: 5px;
 }
 
+.class-box {
+	border-bottom: 1px solid white;
+}
+
 .low-margin {
 	margin: 10px 0;
 }
-
 
 .schedule-pages {
 	border-bottom: 1px solid #ddd;

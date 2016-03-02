@@ -21,28 +21,46 @@ var courseList = {};
 $(document).ready(function() {
 	initializePage();
 
+	$(".alert").on('click', function(event) {
+		$(this).slideUp("normal");
+	});
+
 	$('button[href="#search"]').on('click', function(event) {
+		$(".alert").slideUp("normal");
+
 		let text = $("input#search-complete").val();// "CSE 100"
 		text = text.replace(/\s/g, '');
-		for(var c of classes) {
+		for(var c of classes) { // check if class has already been added
 			if((c.sub + c.num) === text) {
+				$("#already-added-error").show();
 				console.log(text + ' has already been added');
 				return;
 			}
 		}
-
+		// get class object
 		let subjectCourse = courseList[text];
-		classes.push(new Class(subjectCourse));
-
+		if(!subjectCourse) {
+			$("#not-found-error").show();
+			console.log('class ' + text + ' not found');
+			return;
+		}
+		var addedClass = new Class(subjectCourse);
+		classes.push(addedClass);
+		// generation
 		var start = Date.now();
 		var arrangeList = getArrangements(classes);
-		s = generateSchedules(arrangeList);
+		var newS = generateSchedules(arrangeList);
 		var runtime = Date.now() - start;
 		console.log("generation time: "+ runtime + "ms");
-		if(s.length == 0) {
-			// WARNING POPUP
-			// NO SCHEDULES GENERATED
+		// check for error
+		if(newS.length == 0) {
+			classes.splice(classes.indexOf(addedClass), 1);
+			$("#no-schedule-error").show();
+			console.log("no-schedule-error");
+			return;
 		}
+		// create calendar
+		s = newS;
 		createPages(s.length);
 		createCalendar(s[0],0);
 	});
@@ -381,7 +399,6 @@ function createPages(n) { // creates n schedulenav tabs
 	}
 
 	$(".schedule").on('click', function(event) {
-		console.log("NAV CLICKED");
 		var active = $(".schedule-pages").find(".active a").attr("href");
 		var clicked = $(this).find("a").attr("href");
 		console.log("active " + active);
@@ -417,7 +434,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			var top = (aClass[part].time.start - 800) / 100 * 60; // in px
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
 			
-			var classBlock = '<a href="#" data-toggle="modal" data-target="#class1info"><div class="col-xs-offset-4 col-xs-6 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
+			var classBlock = '<a href="#" data-toggle="modal" data-target="#classInfo"><div class="col-xs-offset-4 col-xs-6 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
 			for(var day of aClass[part].time.days) {
 				var dayId = "monday";
 				switch(day) {
@@ -431,7 +448,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 						dayId = "wednesday";
 						break;
 					case "Th":
-						dayId  = "thursday";
+						dayId = "thursday";
 						break;
 					case "F":
 						dayId = "friday";

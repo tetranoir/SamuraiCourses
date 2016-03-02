@@ -30,7 +30,18 @@
 			<h1>Create Schedule</h1>
 			<p>Hopefully one of these is useful</p>
 		</div>
-		<div class="row create-buttons">
+		<div class="row">
+			<!-- Errors -->
+			<div class="alert alert-danger" id="no-schedule-error" style="display: none;">
+				Adding that class generates no possible schedules!
+			</div>
+			<div class="alert alert-info" id="already-added-error" style="display: none;">
+				That class has already been added!
+			</div>
+			<div class="alert alert-warning" id="not-found-error" style="display: none;">
+				Class not found!
+			</div>
+			
 			<div class="col-xs-6 col-md-3"> 
 				<div class="form-group">
 					<input type="text" class="form-control" id="search-complete" placeholder="ex: CSE120">
@@ -47,7 +58,7 @@
 		    <li class="schedule"><a data-toggle="tab" href="3">3</a></li>
 		  </ul>
 		</div>
-
+		<br>
 		<div class="row daily container">
 			<ul class="nav nav-pills nav-justified nav-color">
 				<li class="active daily-day"><a data-toggle="pill" href="#monday">M</a></li>
@@ -78,7 +89,7 @@
 				</div>
 
 				<!-- Modal-->
-				<div id="class1info" class="modal fade">
+				<div id="classInfo" class="modal fade">
 				  <div class="modal-dialog">
 				    <!-- Modal content-->
 				    <div class="modal-content">
@@ -112,7 +123,7 @@
 	-->
 
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 	<!-- awesomplete from web search -->
 	<script src="../js/awesomplete.js"></script>
 	<script src="../js/search.js"></script>
