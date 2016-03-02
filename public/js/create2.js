@@ -493,8 +493,8 @@ function getArrangements(classes) {
 
 function updateCalendar(event){
 	$(".alert").slideUp("normal");
-
-$(".alert").slideUp("normal");
+	// google analytics
+	ga("send", "event", "search", "addClass");
 
 		let text = $("input#search-complete").val();// "CSE 100"
 		text = text.toUpperCase();
