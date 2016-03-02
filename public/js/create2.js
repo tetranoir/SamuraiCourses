@@ -35,33 +35,20 @@ $(document).ready(function() {
 		classes.push(new Class(subjectCourse));
 
 		var start = Date.now();
-		var arrangeList = [];
-		for(var c of classes) {
-			arrangeList.push(c.arrangements());
-		}
-		console.log(arrangeList);
+		var arrangeList = getArrangements(classes);
 		s = generateSchedules(arrangeList);
 		var runtime = Date.now() - start;
-		/*
-		console.log(s);
-		console.log(runtime);
-		*/
+		console.log("generation time: "+ runtime + "ms");
 		if(s.length == 0) {
 			// WARNING POPUP
 			// NO SCHEDULES GENERATED
 		}
-		/*for(var i in s) {	
-			console.log('button calendaring');
-			randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
-			createCalendar(s[i], i);
-		}*/
-		console.log('button calendaring');
-		randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
-		createCalendar(s[0], 0);
-	});	
+		createPages(s.length);
+		createCalendar(s[0],0);
+	});
 });
 
-var initializePage = function() {
+function initializePage() {
 	$.get(courseURL, function(course){
 		courseList = course;
 	});
@@ -105,11 +92,9 @@ var initializePage = function() {
 	console.log(s);
 	console.log(runtime);
 	*/
-	for(var i in s) {	
-		console.log('calendaring');
-		randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
-		createCalendar(s[i], i);
-	}
+	console.log('calendaring ' + s.length);
+	createPages(s.length);
+	createCalendar(s[0], 0);
 };
 
 /*
@@ -367,8 +352,8 @@ function createCalendarTable(start, end) { // only generate on the hour
 		var timeStrA = pad + timeStr.toString() + ':00' + am_pm;
 		var timeStrB = pad + timeStr.toString() + ':30' + am_pm;
 
-		var newACell = '<div class="row half-hour-cell-a"><div class="col-xs-4"><text>' + timeStrA + '</text></div></div>';
-		var newBCell = '<div class="row half-hour-cell-b"><div class="col-xs-4"><text>' + timeStrB + '</text></div></div>';
+		var newACell = '<div class="row half-hour-cell-a"><div class="col-xs-3"><text>' + timeStrA + '</text></div></div>';
+		var newBCell = '<div class="row half-hour-cell-b"><div class="col-xs-3"><text>' + timeStrB + '</text></div></div>';
 		
 		$('.daily-timecells').append($(newACell), $(newBCell));
 	}
@@ -388,8 +373,34 @@ randColor.pick = function() {
 	return randColor.colors.pop();
 }
 
+function createPages(n) { // creates n schedulenav tabs
+	$(".schedule").remove();
+	$(".schedule-pages").find(".nav").append('<li class="schedule active"><a data-toggle="tab" href=' + 1 + '>' + 1 + '</a></li>');
+	for(var i=1; i<n; i++) {
+		$(".schedule-pages").find(".nav").append('<li class="schedule"><a data-toggle="tab" href=' + (i+1) + '>' + (i+1) + '</a></li>');
+	}
+
+	$(".schedule").on('click', function(event) {
+		console.log("NAV CLICKED");
+		var active = $(".schedule-pages").find(".active a").attr("href");
+		var clicked = $(this).find("a").attr("href");
+		console.log("active " + active);
+		console.log("clicked " + clicked);
+		if(clicked == active)
+			return;
+		clicked -= 1;
+		createCalendar(s[clicked], clicked);
+	});
+}
+
+function cleanCalendar() {
+	$(".class-box").remove();
+}
 
 function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
+	randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
+	cleanCalendar();
+	console.log("create calendar " + i);
 	for(var aClass of s.arrangement) {
 		var color = randColor.pick();
 		console.log(color);
@@ -435,5 +446,19 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 	}
 }
 
+function createAllCalendars(s) {
+	for(var i in s) {	
+		console.log('button calendaring');
+		createCalendar(s[i], i);
+	}
+}
+
+function getArrangements(classes) {
+	var arrangeList = [];
+	for(var c of classes) {
+		arrangeList.push(c.arrangements());
+	}
+	return arrangeList;
+}
 
 

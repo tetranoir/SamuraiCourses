@@ -31,13 +31,24 @@
 			<p>Hopefully one of these is useful</p>
 		</div>
 		<div class="row create-buttons">
-			<div class="col-xs-offset-1">Search for courses: 
-				<span><input id="search-complete" placeholder="ex: CSE120" /></span>
-				<button type="button" href="#search" class="col-xs-offset-1 btn btn-default">add class</button>
+			<div class="col-xs-6 col-md-3"> 
+				<div class="form-group">
+					<input type="text" class="form-control" id="search-complete" placeholder="ex: CSE120">
+				</div>
+			</div>
+			<div>
+				<button type="button" href="#search" class="btn btn-default">add class</button>
 			</div>
 		</div>
-		<br>
-		<div class="daily">
+		<div class="row schedule-pages">
+		  <ul class="nav nav-tabs pull-right">
+		    <li class="schedule active"><a data-toggle="tab" href="1">1</a></li>
+		    <li class="schedule"><a data-toggle="tab" href="2">2</a></li>
+		    <li class="schedule"><a data-toggle="tab" href="3">3</a></li>
+		  </ul>
+		</div>
+
+		<div class="row daily container">
 			<ul class="nav nav-pills nav-justified nav-color">
 				<li class="active daily-day"><a data-toggle="pill" href="#monday">M</a></li>
 				<li class="daily-day"><a data-toggle="pill" href="#tuesday">T</a></li>

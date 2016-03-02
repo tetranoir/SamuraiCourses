@@ -79,16 +79,16 @@ div.awesomplete > ul:empty {
 	}
 	
 	div.awesomplete > ul > li[aria-selected="true"] {
-		background: hsl(205, 40%, 40%);
+		background: hsl(205, 40%, 80%);
 		color: white;
 	}
 	
 		div.awesomplete mark {
-			background: hsl(65, 100%, 50%);
+			background: hsl(210, 100%, 80%);
 		}
 		
 		div.awesomplete li:hover mark {
-			background: hsl(68, 100%, 41%);
+			background: hsl(210, 100%, 80%);
 		}
 		
 		div.awesomplete li[aria-selected="true"] mark {
