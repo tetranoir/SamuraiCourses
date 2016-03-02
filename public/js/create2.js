@@ -502,8 +502,6 @@ function updateCalendar(event){
 		var now = new Date();
 		var elapsed = now - loadDate;
 		ga('send', 'timing', 'search', 'elapsed', elapsed);
-		console.log(elapsed);
-		console.log("does it gt here");
 		firstTime = false;
 	}
 
