@@ -17,6 +17,7 @@ var s = []; // schedules
 var classes = []; // classes
 var courseURL = "/search/courses";
 var courseList = {};
+var PAGECAP = 20;
 
 $(document).ready(function() {
 	initializePage();
@@ -36,14 +37,29 @@ $(document).ready(function() {
 });
 
 function initializePage() {
+	let course1;
+	let course2;
+	let course3;
 	$.get(courseURL, function(course){
 		courseList = course;
+		course1 = courseList["CSE100"];
+		course2 = courseList["CSE120"];
+		course3 = courseList["CSE123"];
+		classes.push(new Class(course1));
+		classes.push(new Class(course2));
+		classes.push(new Class(course3));
+		// generation
+		var arrangeList = getArrangements(classes);
+		var newS = generateSchedules(arrangeList);
+		s = newS;
+		createPages(s.length);
+		createCalendar(s[0],0);
 	});
 
 	createCalendarTable(800, 2200); // start end
 	
 	/* TEST DATA */
-	var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'101'});
+	/*var class1 = new Class({'name':'Algs', 'sub':'CSE', 'num':'101'});
 	var t1 = new Time({'days':['M', 'Tu', 'W', 'Th', 'F'], 'start':1600, 'end':1700});
 	var sect1 = new Section({'time':t1});
 	var t1_d1 = new Time({'days':['F'], 'start':1430, 'end':1530});
@@ -75,13 +91,14 @@ function initializePage() {
 	var start = Date.now();
 	s = generateSchedules([arrange1, arrange2, arrange3]);
 	var runtime = Date.now() - start;
-	/*
+	
 	console.log(s);
 	console.log(runtime);
-	*/
+	
 	console.log('calendaring ' + s.length);
 	createPages(s.length);
 	createCalendar(s[0], 0);
+	*/
 };
 
 /*
@@ -91,7 +108,7 @@ var Class = function(data) {
 	this.name = data.name;
 	this.num = data.num;
 	this.sub = data.sub;
-	this.descrip = data.descript;
+	this.description = data.description;
 	this.sections = []; // list of Sections
 	if(data.sections) {
 		for(s of data.sections) {
@@ -117,10 +134,10 @@ Class.prototype.arrangements = function() {
 		}
 		for(var j in sections[i].discussions) {
 			for(var k in sections[i].labs) {
-				arranges.push({  'self':this,
-							   'section':sections[i],
-								    'di':sections[i].discussions[j],
-								   'lab':sections[i].labs[k]});
+				arranges.push({'self':this,
+							'section':sections[i],
+							     'di':sections[i].discussions[j],
+								'lab':sections[i].labs[k]});
 			}
 		}
 	}
@@ -363,7 +380,7 @@ randColor.pick = function() {
 function createPages(n) { // creates n schedulenav tabs
 	$(".schedule").remove();
 	$(".schedule-pages").find(".nav").append('<li class="schedule active"><a data-toggle="tab" href=' + 1 + '>' + 1 + '</a></li>');
-	for(var i=1; i<n; i++) {
+	for(var i=1; i<n && i<PAGECAP; i++) {
 		$(".schedule-pages").find(".nav").append('<li class="schedule"><a data-toggle="tab" href=' + (i+1) + '>' + (i+1) + '</a></li>');
 	}
 
@@ -387,23 +404,29 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 	randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
 	cleanCalendar();
 	console.log("create calendar " + i);
-	for(var aClass of s.arrangement) {
+	for(var aClass of s.arrangement) { // aClass is: the class (self), a section, a di, and a lab
 		var color = randColor.pick();
 		console.log(color);
 		for(var part in aClass) { // part is section, discussion, or lab
 			if(!aClass[part].time) continue; // so so shoddy
-			
+			aClass[part].time.start = parseInt(aClass[part].time.start);
+			aClass[part].time.end = parseInt(aClass[part].time.end);
 			if(aClass[part].time.end % 100 != 0) {
-				aClass[part].time.end += 50 - aClass[part].time.end % 100;
+				aClass[part].time.end += 50 - (aClass[part].time.end % 100);
 			}
 			if(aClass[part].time.start % 100 != 0) {
-				aClass[part].time.start += 50 - aClass[part].time.start % 100;
+				aClass[part].time.start += 50 - (aClass[part].time.start % 100);
 			}
+
 			var height = (aClass[part].time.end - aClass[part].time.start) / 100 * 60 ; // in px
 			var top = (aClass[part].time.start - 800) / 100 * 60; // in px
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
+			var id = aClass.self.sub + aClass.self.num + ' ' + aClass['section'].sectionNum;
 			
-			var classBlock = '<a href="#" data-toggle="modal" data-target="#classInfo"><div class="col-xs-offset-4 col-xs-6 class-box" style="height:' +height.toString() + 'px; background-color:' + color + '; top:'+top.toString() + 'px;"><p class="class-info">' + descrip + '</p></div></a>'
+			var classBlock = '<a href="#" data-toggle="modal" data-target="#classInfo">' +
+							'<div class="col-xs-offset-4 col-xs-6 class-box" id="' + id + '" style="height:' + height.toString() + 'px; background-color:' + color + '; top:' + top.toString() + 'px;">' +
+							'<p class="class-info">' + descrip + '</p></div></a>'
+							
 			for(var day of aClass[part].time.days) {
 				var dayId = "monday";
 				switch(day) {
@@ -430,6 +453,26 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			}
 		}
 	}
+
+	$(".class-box").on('click', function(event) {
+		console.log($("#classInfo").find(".modal-title").html());
+		var id = $(this).attr("id").split(' '); // [class id, section num]
+		var cl = {}
+		for(var c of classes) { // look for class id in classes in calendar
+			if((c.sub + c.num) === id[0]) {
+				cl = c;
+			}
+		}
+		var sect = {}
+		for(var sec of cl.sections) { // look for sec num in class
+			if(sec.sectionNum === id[1]) {
+				sect = sec;
+			}
+		}
+		$("#classInfo").find(".modal-title").html(cl.name);
+		$("#classInfo").find(".modal-body").html(cl.description + "<br>Location:" + sec.location);
+		$("#classInfo").find(".modal-footer p").html(sec.prof);
+	});
 }
 
 function createAllCalendars(s) {
@@ -451,7 +494,10 @@ function getArrangements(classes) {
 function updateCalendar(event){
 	$(".alert").slideUp("normal");
 
+$(".alert").slideUp("normal");
+
 		let text = $("input#search-complete").val();// "CSE 100"
+		text = text.toUpperCase();
 		text = text.replace(/\s/g, '');
 		for(var c of classes) { // check if class has already been added
 			if((c.sub + c.num) === text) {

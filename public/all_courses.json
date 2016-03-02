@@ -4,7 +4,7 @@
     "name":"Advance Data Structures", 
     "num":"100",
     "sub":"CSE",
-    "description":"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables.\n, Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized\n, Uses C++ and STL. Credit not offered for both Math 176 and CSE 100. Equivalent to Math 176. Recommended preparation: background in C or C++ programming.\n, Prerequisites: CSE 12, CSE 15L, CSE 21 or Math 15B, and CSE 5A or CSE 30 or ECE 15 or MAE 9.\n",
+    "description":"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables.\n Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized\n Uses C++ and STL. Credit not offered for both Math 176 and CSE 100. Equivalent to Math 176. Recommended preparation: background in C or C++ programming.\n Prerequisites: CSE 12, CSE 15L, CSE 21 or Math 15B, and CSE 5A or CSE 30 or ECE 15 or MAE 9.\n",
     "sections":
     [
       {
@@ -556,7 +556,7 @@
     "name":"Computer Networks", 
     "num":"123",
     "sub":"CSE", 
-    "description":"(Renumbered from CSE 123A.) Introduction to concepts, principles, and practice of computer communication networks with examples from existing architectures, protocols, and standards with special emphasis on the Internet protocols. Layering and the OSI model; physical and data link layers;\n local and wide area networks; datagrams and virtual circuits; routing and congestion control; internetworking. Transport protocols.\n Credit may not be received for both CSE 123 and ECE 158A, or CSE 123A and CSE 123. Prerequisites: CSE 120 or consent of instructor. Majors only.",
+    "description":"(Renumbered from CSE 123A.) Introduction to concepts, principles, and practice of computer communication networks with examples from existing architectures, protocols, and standards with special emphasis on the Internet protocols. Layering and the OSI model; physical and data link layers;\n local and wide area networks; datagrams and virtual circuits; routing and congestion control; internetworking. Transport protocols.\n Credit may not be received for both CSE 123 and ECE 158A, or CSE 123A and CSE 123. Prerequisites: CSE 120 or consent of instructor. Majors only.\n",
     "sections":
     [
       {
@@ -779,7 +779,7 @@
         "time": {
                 "days":["Tu","Th"],
                 "start":"0800",
-                "end":"0920"
+                "end":"0930"
               },
         "fin": {
                 "days":"6/09/2016",
