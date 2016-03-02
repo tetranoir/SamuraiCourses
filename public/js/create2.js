@@ -18,9 +18,12 @@ var classes = []; // classes
 var courseURL = "/search/courses";
 var courseList = {};
 var PAGECAP = 20;
+var loadDate;
+var firstTime = true;
 
 $(document).ready(function() {
 	initializePage();
+	loadDate = new Date();
 
 	$(".alert").on('click', function(event) {
 		$(this).slideUp("normal");
@@ -495,6 +498,14 @@ function updateCalendar(event){
 	$(".alert").slideUp("normal");
 	// google analytics
 	ga("send", "event", "search", "addClass");
+	if(firstTime){
+		var now = new Date();
+		var elapsed = now - loadDate;
+		ga('send', 'timing', 'search', 'elapsed', elapsed);
+		console.log(elapsed);
+		console.log("does it gt here");
+		firstTime = false;
+	}
 
 		let text = $("input#search-complete").val();// "CSE 100"
 		text = text.toUpperCase();
