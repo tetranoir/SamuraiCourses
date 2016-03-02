@@ -25,45 +25,14 @@ $(document).ready(function() {
 		$(this).slideUp("normal");
 	});
 
-	$('button[href="#search"]').on('click', function(event) {
-		$(".alert").slideUp("normal");
-
-		let text = $("input#search-complete").val();// "CSE 100"
-		text = text.replace(/\s/g, '');
-		for(var c of classes) { // check if class has already been added
-			if((c.sub + c.num) === text) {
-				$("#already-added-error").show();
-				console.log(text + ' has already been added');
-				return;
-			}
-		}
-		// get class object
-		let subjectCourse = courseList[text];
-		if(!subjectCourse) {
-			$("#not-found-error").show();
-			console.log('class ' + text + ' not found');
-			return;
-		}
-		var addedClass = new Class(subjectCourse);
-		classes.push(addedClass);
-		// generation
-		var start = Date.now();
-		var arrangeList = getArrangements(classes);
-		var newS = generateSchedules(arrangeList);
-		var runtime = Date.now() - start;
-		console.log("generation time: "+ runtime + "ms");
-		// check for error
-		if(newS.length == 0) {
-			classes.splice(classes.indexOf(addedClass), 1);
-			$("#no-schedule-error").show();
-			console.log("no-schedule-error");
-			return;
-		}
-		// create calendar
-		s = newS;
-		createPages(s.length);
-		createCalendar(s[0],0);
+	$("#searchform").submit(function(e) {
+		e.preventDefault();
+		updateCalendar(e);
+		$("input#search-complete").val("");
+		$('#search').removeClass('open');
 	});
+
+	$('button[href="#search"]').on('click', updateCalendar);
 });
 
 function initializePage() {
@@ -479,3 +448,42 @@ function getArrangements(classes) {
 }
 
 
+function updateCalendar(event){
+	$(".alert").slideUp("normal");
+
+		let text = $("input#search-complete").val();// "CSE 100"
+		text = text.replace(/\s/g, '');
+		for(var c of classes) { // check if class has already been added
+			if((c.sub + c.num) === text) {
+				$("#already-added-error").show();
+				console.log(text + ' has already been added');
+				return;
+			}
+		}
+		// get class object
+		let subjectCourse = courseList[text];
+		if(!subjectCourse) {
+			$("#not-found-error").show();
+			console.log('class ' + text + ' not found');
+			return;
+		}
+		var addedClass = new Class(subjectCourse);
+		classes.push(addedClass);
+		// generation
+		var start = Date.now();
+		var arrangeList = getArrangements(classes);
+		var newS = generateSchedules(arrangeList);
+		var runtime = Date.now() - start;
+		console.log("generation time: "+ runtime + "ms");
+		// check for error
+		if(newS.length == 0) {
+			classes.splice(classes.indexOf(addedClass), 1);
+			$("#no-schedule-error").show();
+			console.log("no-schedule-error");
+			return;
+		}
+		// create calendar
+		s = newS;
+		createPages(s.length);
+		createCalendar(s[0],0);
+}

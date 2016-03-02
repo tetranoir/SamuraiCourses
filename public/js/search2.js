@@ -1,23 +1,54 @@
 'use strict';
 
 $(document).ready(function(){
-	initializePage();
-	$('button[href="#search"]').on('click', function(event) {                    
+	initializeSearch();
+
+	$('.create-buttons button[href="#search2"]').on('click', function(event) {                    
 		$('#search').addClass('open');
-		$('#search > form > input[type="search"]').focus();		
+		//$('#search > form > input[type="search"]').focus();
+		$('#search-complete').focus();
 	});
 
+	/*
+		hard to close
+	*/
 	$('#search, #search button.close').on('click keyup', function(event) {
 		if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
 			$(this).removeClass('open');
 		}
-	});	
+	});
+
+	/*
+	$("#searchform").submit(function(e) {
+		e.preventDefault();
+		$("input#search-complete").val("");
+		$('#search').removeClass('open');
+	});*/
+
 });
 
-function initializePage(){
-	var input = $("#search-complete");
-	var awesomplete = new Awesomplete(input);
-	/* ...more code... */
+function initializeSearch(){
+	var input = document.getElementById("search-complete");
+	var awesomplete = new Awesomplete(input, {
+			minChars: 1,
+			maxItems: 6
+		});
 
-	awesomplete.list = ["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"];
+
+	var courseURL = "/search/courses";
+	var courseList = [];
+
+	$.get(courseURL, function(course){
+		
+		for( let s in course )
+		{
+			courseList.push(s);
+		}
+		//console.log(courseList);
+		awesomplete.list = courseList;
+	});	
+}
+
+function test(){
+	console.log("testing");
 }
