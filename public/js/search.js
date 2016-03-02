@@ -16,7 +16,6 @@ $(document).ready(function(){
 		}
 	});	
 	*/
-
 	$('button[href="#search"]').click(function() {
 		text = $("input#search-complete").val();
 		console.log("searched:" + text);
