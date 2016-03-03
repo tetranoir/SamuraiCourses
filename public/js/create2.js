@@ -3,14 +3,6 @@
 TODO
 Considerations: have section, discussion, and lab inherit from time so .time can be used to access the time of any of them 
 
-add paging functionality for each schedule number, i
-
-json file format + data
-
-search
-
-delete
-
 */
 
 var s = []; // schedules

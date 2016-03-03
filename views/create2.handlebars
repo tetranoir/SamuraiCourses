@@ -6,8 +6,7 @@
 	<title>Create Schedules</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.css" rel="stylesheet">
+	{{> styles}}
 	<link href="../css/homepage.css" rel="stylesheet">
 	<link href="../css/search.css" rel="stylesheet">
 	<link href="../css/awesomplete.css" rel="stylesheet">
@@ -63,8 +62,10 @@
 			</div>
 		</div>
 		<!-- search button -->
-		<div class="row create-buttons container">
-			<button type="button" href="#search2" class="search2 btn btn-default">add class</button>
+		<div class="container">
+			<div class="row create-buttons">
+				<button type="button" href="#search2" class="search2 btn btn-default">add class</button>
+			</div>
 		</div>
 
 		<div class="row schedule-pages">
@@ -105,7 +106,7 @@
 				</div>
 
 				<!-- Modal-->
-				<div id="classInfo" class="modal fade">
+				<div id="class-info" class="modal fade">
 				  <div class="modal-dialog">
 				    <!-- Modal content-->
 				    <div class="modal-content">
@@ -113,11 +114,12 @@
 				        <button type="button" class="close" data-dismiss="modal">&times;</button>
 				        <h4 class="modal-title">Class 1</h4>
 				      </div>
-				      <div class="modal-body">
+				      <div class="modal-body" style="white-space: pre-line">
 				        <p>This is a class where you have to memorize and learn.</p>
 				      </div>
 				      <div class="modal-footer">
 				      	<p>Professor Staff</p>
+				      	<button type="button" class="btn btn-danger pull-left" data-dismiss="modal" id="remove-class">Remove Class</button>
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				      </div>
 				    </div>
