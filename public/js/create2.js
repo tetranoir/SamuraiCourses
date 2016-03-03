@@ -40,6 +40,21 @@ $(document).ready(function() {
 	});
 
 	$('button[href="#search"]').on('click', addToCalendar);
+
+	$("#remove-class").on('click', function(event) {
+		classes.splice(classes.indexOf(activeClass), 1);
+		activeClass = {};
+		console.log(classes);
+		var arrangeList = getArrangements(classes);
+		var newS = generateSchedules(arrangeList);
+		// create calendar
+		s = newS;
+		createPages(s.length);
+		createCalendar(s[0],0);
+	});
+
+
+	console.log("minimap height: " + $(".minimap").height());
 });
 
 function initializePage() {
@@ -367,30 +382,34 @@ function createCalendarTable(start, end) { // only generate on the hour
 		
 		$('.daily-timecells').append($(newACell), $(newBCell));
 	}
+
+	$(".minimap").height(numOfCells * 5 + 4);
 }
 
 function randColor() { }
 randColor.pick = function() {
+	var actuallyRandom = false;
 	if(randColor.colors.length == 0) {
 		console.log("No colors left!!!");
 		return '#FFFFFF';
 	}
-	
-	/*var i = Math.floor((Math.random() * randColor.colors.length));
-	var picked = randColor.colors[i];
-	randColor.colors.splice(i, 1);
-	return picked;*/
+	if(actuallyRandom) {
+		var i = Math.floor((Math.random() * randColor.colors.length));
+		var picked = randColor.colors[i];
+		randColor.colors.splice(i, 1);
+		return picked;
+	}
 	return randColor.colors.pop();
 }
 
 function createPages(n) { // creates n schedulenav tabs
-	$(".schedule").remove();
-	$(".schedule-pages").find(".nav").append('<li class="schedule active"><a data-toggle="tab" href=' + 1 + '>' + 1 + '</a></li>');
+	$(".schedule-pg").remove();
+	$(".schedule-pages").find(".nav").append('<li class="schedule-pg active"><a data-toggle="tab" href=' + 1 + '>' + 1 + '</a></li>');
 	for(var i=1; i<n && i<PAGECAP; i++) {
-		$(".schedule-pages").find(".nav").append('<li class="schedule"><a data-toggle="tab" href=' + (i+1) + '>' + (i+1) + '</a></li>');
+		$(".schedule-pages").find(".nav").append('<li class="schedule-pg"><a data-toggle="tab" href=' + (i+1) + '>' + (i+1) + '</a></li>');
 	}
 
-	$(".schedule").on('click', function(event) {
+	$(".schedule-pg").on('click', function(event) {
 		var active = $(".schedule-pages").find(".active a").attr("href");
 		var clicked = $(this).find("a").attr("href");
 		console.log("active " + active);
@@ -404,10 +423,11 @@ function createPages(n) { // creates n schedulenav tabs
 
 function cleanCalendar() {
 	$(".class-box").remove();
+	$(".minimap-class").remove();
 }
 
 function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
-	randColor.colors = ['#FFFE90','#A5F5A5','#A5A5F5','#F5A5A5','#A5F5F5']; // sets colors
+	randColor.colors = ['#8EDDED','#A5A5F5','#F5A5A5','#A5F5F5','#B19CD9', '#779ECB;', '#77DD77', '#EA736C']; // sets colors, unused:['#FDFD96' '#FFFE90']
 	cleanCalendar();
 	console.log("create calendar " + i);
 	for(var aClass of s.arrangement) { // aClass is: the class (self), a section, a di, and a lab
@@ -425,37 +445,48 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			}
 
 			var height = (aClass[part].time.end - aClass[part].time.start) / 100 * 60 ; // in px
+			var mheight = (aClass[part].time.end - aClass[part].time.start) / 100 * 5;
 			var top = (aClass[part].time.start - 800) / 100 * 60; // in px
+			var mtop = (aClass[part].time.start - 800) / 100 * 5 + 2;
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
 			var id = aClass.self.sub + aClass.self.num + ' ' + aClass['section'].sectionNum;
 			
 			var classBlock = '<a href="#" data-toggle="modal" data-target="#class-info">' +
 							'<div class="col-xs-offset-4 col-xs-6 class-box" id="' + id + '" style="height:' + height.toString() + 'px; background-color:' + color + '; top:' + top.toString() + 'px;">' +
 							'<p class="class-info">' + descrip + '</p></div></a>'
-							
+			var minimapStyle = 'height:' + mheight.toString() + 'px; background-color:' + color + '; top:' + mtop.toString() + 'px; width:16%;';
 			for(var day of aClass[part].time.days) {
 				var dayId = "monday";
+				var dayNum = 0;
 				switch(day) {
 					case "M":
 						dayId = "monday";
+						dayNum = 0;
 						break;
 					case "Tu":
 						dayId = "tuesday";
+						dayNum = 1;
 						break;
 					case "W":
 						dayId = "wednesday";
+						dayNum = 2;
 						break;
 					case "Th":
 						dayId = "thursday";
+						dayNum = 3;
 						break;
 					case "F":
 						dayId = "friday";
+						dayNum = 4;
 						break;
 					default:
 						console.log(day + " is not a recognized day");
 						break;
 				}
+				var mleft = dayNum * 20 + 2; // in %
+				var minimapBlock = '<div class="minimap-class" style="left:' + mleft.toString() + '%; ' + minimapStyle + '"></div>';	
 				$('#' + dayId).find('.row').append($(classBlock));
+				$('.minimap').append($(minimapBlock));
 			}
 		}
 	}
@@ -479,17 +510,6 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 		$("#class-info").find(".modal-title").html(cl.name);
 		$("#class-info").find(".modal-body").html(cl.description + "<br>Location: " + sec.location);
 		$("#class-info").find(".modal-footer p").html(sec.prof);
-	});
-
-	$("#remove-class").on('click', function(event) {
-		classes.splice(classes.indexOf(activeClass), 1);
-		activeClass = {};
-		var arrangeList = getArrangements(classes);
-		var newS = generateSchedules(arrangeList);
-		// create calendar
-		s = newS;
-		createPages(s.length);
-		createCalendar(s[0],0);
 	});
 }
 
