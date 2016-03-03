@@ -426,7 +426,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
 			var id = aClass.self.sub + aClass.self.num + ' ' + aClass['section'].sectionNum;
 			
-			var classBlock = '<a href="#" data-toggle="modal" data-target="#classInfo">' +
+			var classBlock = '<a href="#" data-toggle="modal" data-target="#class-info">' +
 							'<div class="col-xs-offset-4 col-xs-6 class-box" id="' + id + '" style="height:' + height.toString() + 'px; background-color:' + color + '; top:' + top.toString() + 'px;">' +
 							'<p class="class-info">' + descrip + '</p></div></a>'
 							
@@ -458,7 +458,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 	}
 
 	$(".class-box").on('click', function(event) {
-		console.log($("#classInfo").find(".modal-title").html());
+		console.log($("#class-info").find(".modal-title").html());
 		var id = $(this).attr("id").split(' '); // [class id, section num]
 		var cl = {}
 		for(var c of classes) { // look for class id in classes in calendar
@@ -472,9 +472,9 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 				sect = sec;
 			}
 		}
-		$("#classInfo").find(".modal-title").html(cl.name);
-		$("#classInfo").find(".modal-body").html(cl.description + "<br>Location:" + sec.location);
-		$("#classInfo").find(".modal-footer p").html(sec.prof);
+		$("#class-info").find(".modal-title").html(cl.name);
+		$("#class-info").find(".modal-body").html(cl.description + "<br>Location: " + sec.location);
+		$("#class-info").find(".modal-footer p").html(sec.prof);
 	});
 }
 
@@ -505,40 +505,40 @@ function updateCalendar(event){
 		firstTime = false;
 	}
 
-		let text = $("input#search-complete").val();// "CSE 100"
-		text = text.toUpperCase();
-		text = text.replace(/\s/g, '');
-		for(var c of classes) { // check if class has already been added
-			if((c.sub + c.num) === text) {
-				$("#already-added-error").show();
-				console.log(text + ' has already been added');
-				return;
-			}
-		}
-		// get class object
-		let subjectCourse = courseList[text];
-		if(!subjectCourse) {
-			$("#not-found-error").show();
-			console.log('class ' + text + ' not found');
+	let text = $("input#search-complete").val();// "CSE 100"
+	text = text.toUpperCase();
+	text = text.replace(/\s/g, '');
+	for(var c of classes) { // check if class has already been added
+		if((c.sub + c.num) === text) {
+			$("#already-added-error").show();
+			console.log(text + ' has already been added');
 			return;
 		}
-		var addedClass = new Class(subjectCourse);
-		classes.push(addedClass);
-		// generation
-		var start = Date.now();
-		var arrangeList = getArrangements(classes);
-		var newS = generateSchedules(arrangeList);
-		var runtime = Date.now() - start;
-		console.log("generation time: "+ runtime + "ms");
-		// check for error
-		if(newS.length == 0) {
-			classes.splice(classes.indexOf(addedClass), 1);
-			$("#no-schedule-error").show();
-			console.log("no-schedule-error");
-			return;
-		}
-		// create calendar
-		s = newS;
-		createPages(s.length);
-		createCalendar(s[0],0);
+	}
+	// get class object
+	let subjectCourse = courseList[text];
+	if(!subjectCourse) {
+		$("#not-found-error").show();
+		console.log('class ' + text + ' not found');
+		return;
+	}
+	var addedClass = new Class(subjectCourse);
+	classes.push(addedClass);
+	// generation
+	var start = Date.now();
+	var arrangeList = getArrangements(classes);
+	var newS = generateSchedules(arrangeList);
+	var runtime = Date.now() - start;
+	console.log("generation time: "+ runtime + "ms");
+	// check for error
+	if(newS.length == 0) {
+		classes.splice(classes.indexOf(addedClass), 1);
+		$("#no-schedule-error").show();
+		console.log("no-schedule-error");
+		return;
+	}
+	// create calendar
+	s = newS;
+	createPages(s.length);
+	createCalendar(s[0],0);
 }

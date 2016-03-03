@@ -73,6 +73,10 @@
   padding-left: 0;
 }
 
+.daily-timecells {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .daily > .nav-justified > li {
 	display: table-cell;
 	width: 1%;
