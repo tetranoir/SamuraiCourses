@@ -20,23 +20,26 @@ var courseList = {};
 var PAGECAP = 20;
 var loadDate;
 var firstTime = true;
+var activeClass = {};
 
 $(document).ready(function() {
 	initializePage();
 	loadDate = new Date();
 
 	$(".alert").on('click', function(event) {
-		$(this).slideUp("normal");
+		$(this).slideUp("normal", function() {
+			$(this).hide();
+		});
 	});
 
 	$("#searchform").submit(function(e) {
 		e.preventDefault();
-		updateCalendar(e);
+		addToCalendar(e);
 		$("input#search-complete").val("");
 		$('#search').removeClass('open');
 	});
 
-	$('button[href="#search"]').on('click', updateCalendar);
+	$('button[href="#search"]').on('click', addToCalendar);
 });
 
 function initializePage() {
@@ -466,6 +469,7 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 				cl = c;
 			}
 		}
+		activeClass = cl;
 		var sect = {}
 		for(var sec of cl.sections) { // look for sec num in class
 			if(sec.sectionNum === id[1]) {
@@ -475,6 +479,17 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 		$("#class-info").find(".modal-title").html(cl.name);
 		$("#class-info").find(".modal-body").html(cl.description + "<br>Location: " + sec.location);
 		$("#class-info").find(".modal-footer p").html(sec.prof);
+	});
+
+	$("#remove-class").on('click', function(event) {
+		classes.splice(classes.indexOf(activeClass), 1);
+		activeClass = {};
+		var arrangeList = getArrangements(classes);
+		var newS = generateSchedules(arrangeList);
+		// create calendar
+		s = newS;
+		createPages(s.length);
+		createCalendar(s[0],0);
 	});
 }
 
@@ -494,8 +509,7 @@ function getArrangements(classes) {
 }
 
 
-function updateCalendar(event){
-	$(".alert").slideUp("normal");
+function addToCalendar(event){
 	// google analytics
 	ga("send", "event", "search", "addClass");
 	if(firstTime){
@@ -510,7 +524,9 @@ function updateCalendar(event){
 	text = text.replace(/\s/g, '');
 	for(var c of classes) { // check if class has already been added
 		if((c.sub + c.num) === text) {
-			$("#already-added-error").show();
+			$(".alert").slideUp(0, function() {
+				$("#already-added-error").show();
+			});
 			console.log(text + ' has already been added');
 			return;
 		}
@@ -518,7 +534,9 @@ function updateCalendar(event){
 	// get class object
 	let subjectCourse = courseList[text];
 	if(!subjectCourse) {
-		$("#not-found-error").show();
+		$(".alert").slideUp(0, function() {
+			$("#not-found-error").show();
+		});
 		console.log('class ' + text + ' not found');
 		return;
 	}
@@ -533,7 +551,9 @@ function updateCalendar(event){
 	// check for error
 	if(newS.length == 0) {
 		classes.splice(classes.indexOf(addedClass), 1);
-		$("#no-schedule-error").show();
+		$(".alert").slideUp(0, function() {
+			$("#no-schedule-error").show();
+		});
 		console.log("no-schedule-error");
 		return;
 	}
@@ -541,4 +561,6 @@ function updateCalendar(event){
 	s = newS;
 	createPages(s.length);
 	createCalendar(s[0],0);
+	// no errors
+	$(".alert").slideUp("normal");
 }

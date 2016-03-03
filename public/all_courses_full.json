@@ -64,6 +64,46 @@
                   },
             "location":"SEQUO 148",
             "discussionNum":"A04"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Tu"],
+                    "start":"1100",
+                    "end":"1200"
+                  },
+            "location":"WLH 2115",
+            "discussionNum":"A05"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Tu"],
+                    "start":"0800",
+                    "end":"0900"
+                  },
+            "location":"WLH 2112",
+            "discussionNum":"A06"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Tu"],
+                    "start":"2000",
+                    "end":"2100"
+                  },
+            "location":"WLH 2115",
+            "discussionNum":"A07"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Tu"],
+                    "start":"1000",
+                    "end":"1100"
+                  },
+            "location":"WLH 2115",
+            "discussionNum":"A08"
           }
         ]
       }
@@ -114,6 +154,26 @@
                   },
             "location":"CSB 005",
             "discussionNum":"867326"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"867327"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"874470"
           }
         ]
       },
@@ -217,7 +277,7 @@
                 "days":"6/04/2016",
                 "start":"11:30 am",
                 "end":"2:30 pm"
-              },
+             },
         "sectNum":"867337",
         "units":"4",
         "prof":"Jeanne Ferrante",
@@ -324,6 +384,16 @@
                   },
             "location":"WLH 2207",
             "discussionNum":"A01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1800",
+                    "end":"1900"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"A02"
           },
           {
             "self":"DI",
