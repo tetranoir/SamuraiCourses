@@ -31,7 +31,10 @@ $(document).ready(function() {
 		$('#search').removeClass('open');
 	});
 
-	$('button[href="#search"]').on('click', addToCalendar);
+	$('button[href="#search"]').on('click', function(e){
+		addToCalendar(e);
+		$("input#search-complete").val("");
+	});
 
 	$("#remove-class").on('click', function(event) {
 		classes.splice(classes.indexOf(activeClass), 1);
@@ -573,6 +576,12 @@ function addToCalendar(event){
 	s = newS;
 	createPages(s.length);
 	createCalendar(s[0],0);
-	// no errors
-	$(".alert").slideUp("normal");
+	// no errors	
+	$(".alert").slideUp(0, function() {
+			let addSucess = $("#add-sucess");
+			let sucessText = text + " has been successfully added."
+			addSucess.text(sucessText);
+			addSucess.show();
+		});
+	//$(".alert").slideUp("normal");
 }
