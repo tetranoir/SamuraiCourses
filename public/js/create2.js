@@ -24,6 +24,15 @@ $(document).ready(function() {
 		});
 	});
 
+
+	$("input#search-complete").keyup(function(e){
+		if( e.keyCode === 13){
+			addToCalendar(e);
+			$("input#search-complete").val("");
+		}
+	});
+
+
 	$("#searchform").submit(function(e) {
 		e.preventDefault();
 		addToCalendar(e);
@@ -540,7 +549,8 @@ function addToCalendar(event){
 	for(var c of classes) { // check if class has already been added
 		if((c.sub + c.num) === text) {
 			$(".alert").slideUp(0, function() {
-				$("#already-added-error").show();
+				$("#already-added-error").text( text + " has already been added!").show();
+				//addError.show();
 			});
 			console.log(text + ' has already been added');
 			return;
@@ -550,7 +560,7 @@ function addToCalendar(event){
 	let subjectCourse = courseList[text];
 	if(!subjectCourse) {
 		$(".alert").slideUp(0, function() {
-			$("#not-found-error").show();
+			$("#not-found-error").text("Class " + text + " not found").show();
 		});
 		console.log('class ' + text + ' not found');
 		return;
@@ -567,7 +577,7 @@ function addToCalendar(event){
 	if(newS.length == 0) {
 		classes.splice(classes.indexOf(addedClass), 1);
 		$(".alert").slideUp(0, function() {
-			$("#no-schedule-error").show();
+			$("#no-schedule-error").text("Adding " + text + " generates no possible schedules!").show();
 		});
 		console.log("no-schedule-error");
 		return;
