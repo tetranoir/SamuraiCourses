@@ -4965,6 +4965,7 @@ a.badge:focus {
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
+  background: #eee url("../images/katana.png") no-repeat center center;
 }
 .jumbotron h1,
 .jumbotron .h1 {

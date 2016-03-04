@@ -92,6 +92,6 @@ div.awesomplete > ul:empty {
 		}
 		
 		div.awesomplete li[aria-selected="true"] mark {
-			background: hsl(86, 100%, 21%);
+			background: hsla(230, 100%, 50%, 0.4);
 			color: inherit;
 		}

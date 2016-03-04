@@ -497,7 +497,7 @@
     },
     {
       "abrv": "ICAM",
-      "id": "C",
+      "id": "I",
       "name": "Computing and the Arts"
     },
     {
@@ -712,12 +712,12 @@
     },
     {
       "abrv": "MGT",
-      "id": "R",
+      "id": "M",
       "name": "Rady School of Management"
     },
     {
       "abrv": "MGTF",
-      "id": "R",
+      "id": "M",
       "name": "Rady Sch of Management Finance"
     },
     {
@@ -882,7 +882,7 @@
     },
     {
       "abrv": "SPPS",
-      "id": "P",
+      "id": "S",
       "name": "Pharmacy"
     },
     {
@@ -897,7 +897,7 @@
     },
     {
       "abrv": "TDCH",
-      "id": "D",
+      "id": "T",
       "name": "Dance/Choreography"
     },
     {
@@ -922,7 +922,7 @@
     },
     {
       "abrv": "TDHD",
-      "id": "D",
+      "id": "T",
       "name": "Dance/History"
     },
     {
@@ -932,12 +932,12 @@
     },
     {
       "abrv": "TDMV",
-      "id": "D",
+      "id": "T",
       "name": "Dance/Movement"
     },
     {
       "abrv": "TDPF",
-      "id": "D",
+      "id": "T",
       "name": "Dance/Performance"
     },
     {
@@ -952,7 +952,7 @@
     },
     {
       "abrv": "TDTR",
-      "id": "D",
+      "id": "T",
       "name": "Dance/Theory"
     },
     {
