@@ -454,9 +454,12 @@ function createCalendar(s, i) { // schedule, schedule number (eg which schedule)
 			var mtop = (aClass[part].time.start - 800) / 100 * 5 + 2;
 			var descrip = aClass.self.sub + aClass.self.num + ' ' + aClass[part].self;
 			var id = aClass.self.sub + aClass.self.num + ' ' + aClass['section'].sectionNum;
+
+			//var backgroundColor = 'background-image:         linear-gradient(to bottom, #fff 0%, ' + color + ' 80%);'
+			var backgroundColor = 'background-color:' + color + ';'
 			
 			var classBlock = '<a href="#" data-toggle="modal" data-target="#class-info">' +
-							'<div class="col-xs-offset-4 col-xs-6 class-box" id="' + id + '" style="height:' + height.toString() + 'px; background-color:' + color + '; top:' + top.toString() + 'px;">' +
+							'<div class="col-xs-offset-4 col-xs-6 class-box" id="' + id + '" style="height:' + height.toString() + 'px; top:' + top.toString() + 'px; ' + backgroundColor + '">' +
 							'<p class="class-info">' + descrip + '</p></div></a>'
 			var minimapStyle = 'height:' + mheight.toString() + 'px; background-color:' + color + '; top:' + mtop.toString() + 'px; width:16%;';
 			for(var day of aClass[part].time.days) {

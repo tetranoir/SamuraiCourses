@@ -16,7 +16,7 @@ def main():
         
     properties = []
     for sub in subs:
-        properties.append({'abrv':sub[0], 'name':sub[1], 'id':sub[1][0]})
+        properties.append({'abrv':sub[0], 'name':sub[1], 'id':sub[0][0]})
     abrv_name['all_subjects'] = properties
     
     f_json = open('all_subs.json', 'w')
