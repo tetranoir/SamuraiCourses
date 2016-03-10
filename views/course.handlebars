@@ -1,13 +1,13 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Samurai Courses - Subject</title>	
+	<title>Samurai Courses - Course</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	{{> styles}}
-	<link href="../css/homepage.css" rel="stylesheet">
-	<link href="../css/explore.css" rel="stylesheet">
+	<link href="../../css/bootstrap.css" rel="stylesheet">
+	<link href="../../css/bootstrap theme/bootstrap-theme.css" rel="stylesheet">
+	<link href="../../css/homepage.css" rel="stylesheet">
+	<link href="../../css/explore.css" rel="stylesheet">
 	<link rel="icon" type="../image/png" href="favicon.png">
 	<link rel="shortcut icon" type="../image/png" href="favicon.png">      
 </head>
@@ -19,18 +19,13 @@
 
 	<div class="container">
 		<div class="jumbotron">
-			<h1>{{subject}}</h1>
-			<p>Click on a course to view course description</p>
+			<h1>Course Description</h1>
+			<p>{{sub}}{{num}}</p>
 		</div>
 
 		<div class="container">
-			{{#each courses}}
-			<a id="{{@key}}" href="{{sub}}/{{@key}}">{{@key}}</a>
-			<br>
-			<!-- 
-			<a id="{{id}}" class="not-active {{abrv}}" href="subject/{{abrv}}">({{abrv}}) {{name}}</a>
-			</br> -->
-			{{/each}}
+			<h2>{{name}}</h2>
+			<p>{{description}}</p>
 		</div>
 
 
@@ -41,7 +36,6 @@
 		
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.js"></script>
-	<script src="../js/explore.js"></script>
+	<script src="../../js/bootstrap.js"></script>
 </body>
 </html>

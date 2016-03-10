@@ -39,3 +39,9 @@
 .class-container span{
 	color: #6E4949;
 }
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   color: black;
+}

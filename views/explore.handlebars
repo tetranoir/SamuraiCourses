@@ -21,7 +21,7 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Explore</h1>
-			<p>Look around and see if a course fits in your schedule</p>
+			<p>Look around for any interesting course</p>
 		</div>
 	</div>
 	<div class="container">
@@ -58,7 +58,7 @@
 
 		<div class="class-container">
 			{{#each all_subjects}}
-			<a id="{{id}}" href="subject/{{abrv}}">({{abrv}}) {{name}}</a>
+			<a id="{{id}}" class="not-active {{abrv}}" href="subject/{{abrv}}">({{abrv}}) {{name}}</a>
 			</br>
 			{{/each}}
 		</div>

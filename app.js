@@ -15,6 +15,7 @@ var explore = require('./routes/explore');
 var about = require('./routes/about');
 var help = require('./routes/help');
 var subject = require('./routes/subject');
+var course = require('./routes/courseController');
 // Example route
 // var user = require('./routes/user');
 
@@ -51,6 +52,7 @@ app.get('/explore', explore.view);
 app.get('/help', help.view);
 app.get('/about', about.view);
 app.get('/subject/:id', subject.view);
+app.get('/subject/:id/:course', course.view);
 //app.get('/project/:id', project.projectInfo);
 // Example route
 // app.get('/users', user.list);
