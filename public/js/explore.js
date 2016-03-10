@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 	initializePage();
+
+	$('.class-container .CSE').removeClass("not-active");
 });
 
 function initializePage() {

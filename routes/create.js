@@ -12,4 +12,4 @@ exports.view2 = function(req, res){
 
 exports.courseInfo = function(req, res) {
   	res.json(courses);
-}
+};
