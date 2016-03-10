@@ -346,24 +346,6 @@
                     "end":"1300"
                   },
             "location":"EBU3B B240"
-          },
-          {
-            "self":"LA",
-            "time": {
-                    "days":["M"],
-                    "start":"1000",
-                    "end":"1300"
-                  },
-            "location":"EBU3B B250"
-          },
-          {
-            "self":"LA",
-            "time": {
-                    "days":["M"],
-                    "start":"1000",
-                    "end":"1300"
-                  },
-            "location":"EBU3B B260"
           }
         ]
       },
@@ -416,24 +398,6 @@
                     "end":"1300"
                   },
             "location":"EBU3B B240"
-          },
-          {
-            "self":"LA",
-            "time": {
-                    "days":["W"],
-                    "start":"1000",
-                    "end":"1300"
-                  },
-            "location":"EBU3B B250"
-          },
-          {
-            "self":"LA",
-            "time": {
-                    "days":["W"],
-                    "start":"1000",
-                    "end":"1300"
-                  },
-            "location":"EBU3B B260"
           }
         ]
       }
