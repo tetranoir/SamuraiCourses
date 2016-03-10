@@ -543,6 +543,7 @@ function addToCalendar(event){
 		var now = new Date();
 		var elapsed = now - loadDate;
 		ga('send', 'timing', 'search', 'elapsed', elapsed);
+		console.log("time elapsed: " + elapsed);
 		firstTime = false;
 	}
 

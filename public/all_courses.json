@@ -1,4 +1,511 @@
 {
+  "CSE8A":
+  {
+    "name":"Intro/Computer Science: Java I", 
+    "num":"8",
+    "sub":"CSE",
+    "description":"Introductory course for students interested in computer science. Fundamental concepts of applied computer science using media computation. Exercises in the theory and practice of computer science. Hands-on experience with designing, editing, compiling, and executing programming constructs and applications. CSE 8A is part of a two-course sequence (CSE 8A and CSE 8B) that is equivalent to CSE 11. Students should take CSE 8B to complete this track. Formerly offered as corequisite courses CSE 8A plus 8AL. Students who have taken CSE 8B or CSE 11 may not take CSE 8A. Recommended preparation: No prior programming experience is assumed, but comfort using computers is helpful. Students should consult the CSE Course Placement Advice web page for assistance in choosing which CSE course to take first. Prerequisites: none.",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1830",
+                "end":"2000"
+              },          
+        "fin": {
+                "days":"6/07/2016",
+                "start":"7:00 pm",
+                "end":"10:00 pm"
+             },
+        "units":"4",
+        "prof":"Yingjun Cao",
+        "location":"YORK 2622",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"PCYNH 109",
+            "discussionNum":"A01"
+          }
+        ],
+        "labs": 
+        [
+          {
+            "self":"LA",
+            "time": {
+                    "days":["W"],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":"EBU3B B230"
+          },
+          {
+            "self":"LA",
+            "time": {
+                    "days":["W"],
+                    "start":"1300",
+                    "end":"1400"
+                  },
+            "location":"EBU3B B250"
+          },
+          {
+            "self":"LA",
+            "time": {
+                    "days":["M"],
+                    "start":"1400",
+                    "end":"1500"
+                  },
+            "location":"EBU3B B260"
+          }
+      ]
+      }
+    ]
+  },
+  "CSE11":
+  {
+    "name":"Intro/Computer Sci&Obj-Ori:Java", 
+    "num":"11",
+    "sub":"CSE", 
+    "description":"An accelerated introduction to computer science and programming using the Java language. Basic UNIX. Modularity and abstraction. Documentation, testing and verification techniques. Basic object-oriented programming, including inheritance and dynamic binding. Exception handling. Event-driven programming. Experience with AWT library or other similar library. Students who have completed CSE 8B may not take CSE 11. Students should consult the CSE Course Placement Advice web page for assistance in choosing which CSE course to take first. Recommended preparation: high school algebra and familiarity with computing concepts and a course in a compiled language. Prerequisites: none.\n",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1300",
+                "end":"1400"
+              },
+        "fin": {
+                "days":"6/09/2016",
+                "start":"11:30 am",
+                "end":"2:29  pm"
+             },
+        "sectNum":"867256",
+        "units":"4",
+        "prof":"Phillip Micha Papadopoulos",
+        "location":"CENTER 212",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"CENTR 216",
+            "discussionNum":"A01"
+          }
+        ],
+        "labs": 
+        [
+          {
+            "self":"LA",
+            "time": {
+                    "days":[""],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":""
+          }
+        ]
+      }
+    ]
+},
+  "CSE12":
+  {
+    "name":"Basic Data Struct & OO Design", 
+    "num":"12",
+    "sub":"CSE", 
+    "description":"Use and implementation of basic data structures including linked lists, stacks, and queues. Use of advanced structures such as binary trees and hash tables. Object-oriented design including interfaces, polymorphism, encapsulation, abstract data types, pre-/post-conditions. Recursion. Uses Java and Java Collections. Prerequisites: CSE 8B or CSE 11, and concurrent enrollment with CSE 15L.",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1700",
+                "end":"1830"
+              },
+        "fin": {
+                "days":"6/09/2016",
+                "start":"7:00 pm",
+                "end":"9:59  pm"
+             },
+        "sectNum":"867259",
+        "units":"4",
+        "prof":"Gary N Gillespie",
+        "location":"SOLIS 107",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Th"],
+                    "start":"1830",
+                    "end":"1930"
+                  },
+            "location":"SOLIS 107",
+            "discussionNum":"A01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["Tu"],
+                    "start":"1830",
+                    "end":"1930"
+                  },
+            "location":"SOLIS 107",
+            "discussionNum":"A02"
+          }
+        ],
+        "labs": 
+        [
+          {
+            "self":"LA",
+            "time": {
+                    "days":[""],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":""
+          }
+        ]
+      },
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1400",
+                "end":"1500"
+              },
+        "fin": {
+                "days":"6/10/2016",
+                "start":"3:00 pm",
+                "end":"5:59 pm"
+             },
+        "units":"4",
+        "prof":"Marina Langlois",
+        "location":"CENTR 119",
+        "sectNum":"867263",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"PCYNH 109",
+            "discussionNum":"B01"
+          }
+        ],
+        "labs": 
+        [
+          {
+            "self":"LA",
+            "time": {
+                    "days":[""],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":""
+          }
+        ]
+      }
+    ]
+},
+  "CSE20":
+  {
+    "name":"Intro/Discrete Mathematics", 
+    "num":"20",
+    "sub":"CSE", 
+    "description":"Basic discrete mathematical structures: sets, relations, functions, sequences, equivalence relations, partial orders, and number systems. Methods of reasoning and proofs: prepositional logic, predicate logic, induction, recursion, and pigeonhole principle. Infinite sets and diagonalization. Basic counting techniques; permutation and combinations. Applications will be given to digital logic design, elementary number theory, design of programs, and proofs of program correctness. Credit not offered for both Math 15A and CSE 20. Equivalent to Math 15A. Prerequisites: CSE 8A or CSE 8B or CSE 11. CSE 8B or CSE 11 may be taken concurrently with CSE 20/ Math 15A.\n",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"0800",
+                "end":"0930"
+              },
+        "fin": {
+                "days":"6/04/2016",
+                "start":"8:00 am",
+                "end":"10:59  am"
+             },
+        "sectNum":"867272",
+        "units":"4",
+        "prof":"Mia Kemp Minnes",
+        "location":"CENTR 101",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1300",
+                    "end":"1400"
+                  },
+            "location":"CSB 002",
+            "discussionNum":"A01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"CSB 002",
+            "discussionNum":"A02"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["W"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"CSB 002",
+            "discussionNum":"A03"
+          }
+        ]
+      },
+      {
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"1830",
+                "end":"2000"
+              },
+        "fin": {
+                "days":"6/04/2016",
+                "start":"8:00 am",
+                "end":"10:59 am"
+             },
+        "units":"4",
+        "prof":"Staff",
+        "location":"PCYNH  109",
+        "sectNum":"867280",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1600",
+                    "end":"1700"
+                  },
+            "location":"CENTER 216",
+            "discussionNum":"B01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1700",
+                    "end":"1800"
+                  },
+            "location":"CENTER 216",
+            "discussionNum":"B02"
+          }
+        ]
+      }
+    ]
+},
+  "CSE21":
+  {
+    "name":"Math/Algorithm&Systems Analys", 
+    "num":"21",
+    "sub":"CSE", 
+    "description":"This course will provide an introduction to the discrete mathematical tools needed to analyze algorithms and systems. Enumerative combinatorics: basic counting principles, inclusion-exclusion, and generating functions. Matrix notation. Applied discrete probability. Finite automata. Credit not offered for both Math 15B and CSE 21. Equivalent to Math 15B. Prerequisites: CSE 20 or Math 15A.\n",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"0900",
+                "end":"1000"
+              },
+        "fin": {
+                "days":"6/08/2016",
+                "start":"8:00 am",
+                "end":"10:59  am"
+             },
+        "sectNum":"867289",
+        "units":"4",
+        "prof":"Miles E Jones",
+        "location":"PCYNH109",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1300",
+                    "end":"1400"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"B01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1400",
+                    "end":"1500"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"B02"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1500",
+                    "end":"1600"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"B03"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":"CSB 005",
+            "discussionNum":"B05"
+          }
+        ]
+      },
+      {
+        "self":"LE",
+        "time": {
+                "days":["M","W","F"],
+                "start":"1600",
+                "end":"1700"
+              },
+        "fin": {
+                "days":"6/09/2016",
+                "start":"3:00 pm",
+                "end":"5:59 pm"
+             },
+        "units":"4",
+        "prof":"Russell Impagliazzo",
+        "location":"CENTR 101",
+        "sectNum":"874487",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1200",
+                    "end":"1250"
+                  },
+            "location":"WLH 2204",
+            "discussionNum":"D01"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1300",
+                    "end":"1400"
+                  },
+            "location":"WLH 2204",
+            "discussionNum":"D02"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1400",
+                    "end":"1500"
+                  },
+            "location":"WLH 2204",
+            "discussionNum":"D03"
+          },
+          {
+            "self":"DI",
+            "time": {
+                    "days":["M"],
+                    "start":"1500",
+                    "end":"1600"
+                  },
+            "location":"WLH 2204",
+            "discussionNum":"D04"
+          }
+        ]
+      }
+      ]
+    },
+  "CSE30":
+  {
+    "name":"Computer Organiz&Systms Progrm", 
+    "num":"30",
+    "sub":"CSE", 
+    "description":"Introduction to organization of modern digital computers—understanding the various components of a computer and their interrelationships. Study of a specific architecture/machine with emphasis on systems programming in C and Assembly languages in a UNIX environment. Prerequisites: CSE 12, CSE 15L, or consent of instructor.\n",
+    "sections":
+    [
+      {
+        "self":"LE",
+        "time": {
+                "days":["Tu","Th"],
+                "start":"0800",
+                "end":"0930"
+              },
+        "fin": {
+                "days":"6/09/2016",
+                "start":"8:00 am",
+                "end":"10:59  am"
+             },
+        "sectNum":"867299",
+        "units":"4",
+        "prof":"Richard Ord",
+        "location":"CENTR 216",
+        "discussions": 
+        [
+          {
+            "self":"DI",
+            "time": {
+                    "days":["F"],
+                    "start":"1300",
+                    "end":"1400"
+                  },
+            "location":"CENTR 105",
+            "discussionNum":"A01"
+          }
+        ],
+        "labs": 
+        [
+          {
+            "self":"LA",
+            "time": {
+                    "days":[""],
+                    "start":"1200",
+                    "end":"1300"
+                  },
+            "location":""
+          }
+        ]
+      }
+     ] 
+  },
   "CSE100":
   {
     "name":"Advance Data Structures", 
